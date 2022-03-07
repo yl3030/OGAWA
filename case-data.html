@@ -711,11 +711,6 @@
     <script src="./public/js/common.js"></script>
 
     <script>
-        $(".fixed-btn_link").click(function(){
-            let target = $(this).data("target");
-            let target_top = $(target).offset().top;
-            $("html,body").animate({ scrollTop:target_top },300);
-        })
         let data_top = $("#data").offset().top;
         let contact_top = $("#contact-customer").offset().top - 30;
         let return_top = $("#return-result").offset().top - 30;

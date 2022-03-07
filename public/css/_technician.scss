@@ -15,7 +15,7 @@
             transition: $transition-common;
         }
         span {
-            width: calc(100% - 55px - 8px);
+            width: calc(100% - 60px - 8px);
             padding: 0 10px;
             transition: $transition-common;
         }
@@ -60,4 +60,15 @@
 
 .icon_question {
     cursor: pointer;
+}
+
+.service {
+    &-short {
+        padding: 7px 15px;
+        border-radius: 15px;
+        border: 1px solid $select2;
+        color: $select2; 
+        margin-left: auto;
+        width: fit-content;
+    }
 }
