@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <title>小川職人後台</title>
+</head>
+<style>
+    body {
+        background-color: transparent;
+        background: linear-gradient(180deg, #F4FCFF 0%, #FFFFFF 33.29%, #FFFFFF 100%);
+    }
+</style>
+<body>
+    <div class="container">
+        <header class="header-page mb-4">
+            <a href="" class="back"><img src="./public/img/icon_arrow-blue-left.svg" alt=""></a>
+            <a href="./index.html"><img class="logo-page" src="./public/img/logo.png" alt=""></a>
+            <div class="menu">
+                <div class="bar bar-top"></div>
+                <div class="bar bar-middle"></div>
+                <div class="bar bar-bottom"></div>
+            </div>
+            <nav class="nav-main">
+                <ul>
+                    <li><a href="">公告欄</a></li>
+                    <li><a href="">補給申請</a></li>
+                    <li><a href="">原廠聯絡資訊</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1 class="return-title">09:30 | 冷2滾1 </h1>
+        <div>
+            <div class="list-common d-flex flex-wrap align-items-center mb-2">
+                <div class="list_title d-flex align-items-center">
+                    <h4>訂單編號</h4>
+                </div>
+                <p class="list_content">N3UPBUHB7CIR20210703</p>
+            </div>
+            <div class="list-common d-flex flex-wrap align-items-center mb-2">
+                <div class="list_title d-flex align-items-center">
+                    <h4>預約台數</h4>
+                </div>
+                <p class="list_content">冷2滾1</p>
+            </div>
+            <div class="list-common d-flex flex-wrap align-items-center mb-2">
+                <div class="list_title d-flex align-items-center">
+                    <h4>服務時間</h4>
+                </div>
+                <p class="list_content">2021/12/03  09:30</p>
+            </div>
+            <div class="list-common d-flex flex-wrap align-items-center mb-2">
+                <div class="list_title d-flex align-items-center">
+                    <h4>服務地址</h4>
+                </div>
+                <p class="list_content">高雄市鼓山區美術北五街</p>
+            </div>
+            <div class="list-common d-flex flex-wrap align-items-center mb-3">
+                <div class="list_title d-flex align-items-center">
+                    <h4>大分類</h4>
+                </div>
+                <div class="list-common_second">
+                    <div class="select d-flex flex-wrap select-small">
+                        <div class="select_item d-flex align-items-center justify-content-between">
+                            <span>小套房</span>
+                        </div>
+                        <div class="select_item d-flex align-items-center justify-content-between">
+                          <span>1房1廳</span>
+                        </div>
+                        <div class="select_item d-flex align-items-center justify-content-between">
+                          <span>會晚點到</span>
+                        </div>
+                        <div class="select_item d-flex align-items-center justify-content-between">
+                          <span>2房1廳</span>
+                        </div>
+                        <div class="select_item d-flex align-items-center justify-content-between">
+                            <span>3房1廳</span>
+                        </div>
+                        <div class="select_item d-flex align-items-center justify-content-between">
+                            <span>4房1廳+</span>
+                        </div>
+                        <div class="select_item d-flex align-items-center justify-content-between">
+                            <span>店面</span>
+                        </div>
+                        <div class="select_item d-flex align-items-center justify-content-between">
+                            <span>辦公室</span>
+                        </div>
+                        <div class="select_item d-flex align-items-center justify-content-between">
+                            <span>公家機關</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list-common d-flex flex-wrap align-items-center mb-3">
+                <div class="list_title d-flex align-items-center">
+                    <h4>金額</h4>
+                </div>
+                <div class="list-common_second list-price">
+                    <div class="input-box">
+                        <label for="">個人執案</label>
+                        <input type="text" placeholder="請輸入金額">
+                    </div>
+                    <div class="input-box">
+                        <label for="">車馬費</label>
+                        <input type="text" placeholder="請輸入金額">
+                    </div>
+                    <div class="input-box">
+                        <label for="">更換零件</label>
+                        <input type="text" placeholder="請輸入金額">
+                    </div>
+                    <div class="input-box">
+                        <label for="">其他</label>
+                        <input type="text" placeholder="請輸入金額">
+                    </div>
+                </div>
+            </div>
+            <div class="list-common d-flex flex-wrap align-items-center mb-3">
+                <div class="list_title d-flex align-items-center">
+                    <h4>收據</h4>
+                </div>
+                <div class="list-common_second list-receipt-upload">
+                    <div class="receipt">
+                        <div class="icon_plus"><img src="./public/img/icon_plus-white.svg" alt=""></div>
+                        <img src="" id="receipt_pic" alt="">
+                        <input type="file" class="upload-btn">
+                    </div>
+                    <button class="btn-common re-upload">
+                        重新上傳<input type="file">
+                    </button>
+                </div>
+            </div>
+            <div class="list-common d-flex flex-wrap align-items-center mb-3">
+                <div class="list_title d-flex align-items-center">
+                    <h4>社群</h4>
+                </div>
+                <div class="list-common_second list-social">
+                    <div class="list-social_content">
+                        <label for="">Facebook</label>
+                        <div class="select d-flex flex-wrap select-small multiple">
+                            <div class="select_item d-flex align-items-center justify-content-between">
+                                <span>評論</span>
+                            </div>
+                            <div class="select_item d-flex align-items-center justify-content-between">
+                              <span>相片</span>
+                            </div>
+                            <div class="select_item d-flex align-items-center justify-content-between">
+                              <span>影片</span>
+                            </div>
+                            <div class="select_item d-flex align-items-center justify-content-between">
+                              <span>打卡</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-social_content">
+                        <label for="">Google</label>
+                        <div class="select d-flex flex-wrap select-small multiple">
+                            <div class="select_item d-flex align-items-center justify-content-between">
+                                <span>評論</span>
+                            </div>
+                            <div class="select_item d-flex align-items-center justify-content-between">
+                              <span>相片</span>
+                            </div>
+                            <div class="select_item d-flex align-items-center justify-content-between">
+                              <span>影片</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list-common d-flex flex-wrap align-items-center mb-3">
+                <div class="list_title d-flex align-items-center">
+                    <h4>備註</h4>
+                </div>
+                <textarea class="list-common_second" name="" id="" cols="30" rows="5"></textarea>
+            </div>
+            <hr class="hr-common">
+            <div class="d-flex align-items-end justify-content-between mb-3">
+                <div class="list_title d-flex align-items-center">
+                    <h4>機器資料</h4>
+                </div>
+                <button class="btn-icon btn-common">
+                    <img src="./public/img/icon_plus.svg" alt="">
+                    <span>新增機器</span>
+                </button>
+            </div>
+            <div class="machine">
+                <div class="machine_data">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <h5 class="machine_data_name">新機器</h5>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="machine-arrow"><img src="./public/img/icon_arrow-deep-right.svg" alt=""></div>
+                            <img class="machine-delete ms-3" src="./public/img/icon_trash-can.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="machine_hide d-block">
+                        <div class="list-common d-flex flex-wrap mb-3">
+                            <h4 class="list_title-second">小分類</h4>
+                            <div class="list-common_second list-social">
+                                <div class="select d-flex flex-wrap select-small select-deep">
+                                    <div class="select_item d-flex align-items-center justify-content-between">
+                                        <span>主臥</span>
+                                    </div>
+                                    <div class="select_item d-flex align-items-center justify-content-between">
+                                      <span>次臥</span>
+                                    </div>
+                                    <div class="select_item d-flex align-items-center justify-content-between">
+                                      <span>客廳</span>
+                                    </div>
+                                    <div class="select_item d-flex align-items-center justify-content-between">
+                                        <span>小孩房</span>
+                                    </div>
+                                    <div class="select_item d-flex align-items-center justify-content-between">
+                                        <span>書房/客房</span>
+                                    </div>
+                                    <div class="select_item select-machine customize d-flex align-items-center justify-content-between">
+                                        <div class="check"><img class="check_icon" src="./public/img/icon_check.svg" alt=""></div>
+                                        <label for="">其他</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-common d-flex flex-wrap mb-3">
+                            <div class="w-100 d-flex align-items-center justify-content-between">
+                                <h4 class="list_title-second">服務項目</h4>
+                                <img class="icon_question" src="./public/img/icon_question.svg" alt="">
+                            </div>
+                            <div class="list-common_second">
+                                <div class="select d-flex flex-wrap select-small select-deep">
+                                    <div class="select_item d-flex align-items-center justify-content-between">
+                                        <span>分離</span>
+                                    </div>
+                                    <div class="select_item d-flex align-items-center justify-content-between">
+                                      <span>吊隱</span>
+                                    </div>
+                                    <div class="select_item d-flex align-items-center justify-content-between">
+                                      <span>窗型</span>
+                                    </div>
+                                    <div class="select_item d-flex align-items-center justify-content-between">
+                                        <span>四方吹</span>
+                                    </div>
+                                    <div class="select_item d-flex align-items-center justify-content-between">
+                                        <span>直立</span>
+                                    </div>
+                                    <div class="select_item d-flex align-items-center justify-content-between">
+                                        <span>滾筒</span>
+                                    </div>
+                                    <div class="select_item d-flex align-items-center justify-content-between">
+                                        <span>水管</span>
+                                    </div>
+                                    <div class="select_item d-flex align-items-center justify-content-between">
+                                        <span>箱型</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-common d-flex flex-wrap mb-3">
+                            <h4 class="list_title-second">品牌</h4>
+                            <select class="list-common_second" name="" id=""></select>
+                        </div>
+                        <div class="list-common d-flex flex-wrap mb-3">
+                            <h4 class="list_title-second">型號</h4>
+                            <input class="list-common_second"></select>
+                        </div>
+                        <div class="list-common d-flex flex-wrap mb-3">
+                            <h4 class="list_title-second">機況</h4>
+                            <div class="list-common_second">
+                                <div class="select d-flex flex-wrap select-small select-deep">
+                                    <div class="select_item d-flex align-items-center justify-content-between">
+                                        <span>新機</span>
+                                    </div>
+                                    <div class="select_item d-flex align-items-center justify-content-between">
+                                      <span>普通</span>
+                                    </div>
+                                    <div class="select_item d-flex align-items-center justify-content-between">
+                                      <span>老機</span>
+                                    </div>
+                                    <div class="select_item d-flex align-items-center justify-content-between">
+                                        <span>無法拆洗</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-common d-flex flex-wrap mb-3">
+                            <h4 class="list_title-second">製造年份</h4>
+                            <div class="list-common_second list-make-time">
+                                <input type="text">
+                                <span>年(西元)</span>
+                            </div>
+                        </div>
+                        <div class="list-common d-flex flex-wrap mb-3">
+                            <h4 class="list_title-second">服務前問題</h4>
+                            <textarea class="list-common_second" name="" id="" cols="30" rows="5"></textarea>
+                        </div>
+                        <div class="list-common d-flex flex-wrap mb-3">
+                            <h4 class="list_title-second">現場狀況</h4>
+                            <textarea class="list-common_second" name="" id="" cols="30" rows="5"></textarea>
+                        </div>
+                        <div class="machine_data_state d-flex flex-wrap align-items-center abnormal mb-3">
+                            <div class="d-flex align-items-center machine_data_state_show">
+                                <div class="check"><img class="check_icon" src="./public/img/icon_check.svg" alt=""></div>
+                                <span class="ms-2">異常</span>
+                            </div>
+                            <div class="machine_data_state_hide w-100 mt-2">
+                                <div class="mb-2">
+                                    <label class="d-block mb-1" for="">異常狀況</label>
+                                    <input class="w-100" type="text">
+                                </div>
+                                <div class="mb-2">
+                                    <label class="d-block mb-1" for="">技師判斷</label>
+                                    <input class="w-100" type="text">
+                                </div>
+                                <div class="">
+                                    <label class="d-block mb-1" for="">處理結果</label>
+                                    <input class="w-100" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="machine_data_state d-flex flex-wrap align-items-center custom mb-3">
+                            <div class="d-flex align-items-center machine_data_state_show">
+                                <div class="check"><img class="check_icon" src="./public/img/icon_check.svg" alt=""></div>
+                                <span class="ms-2">客訴</span>
+                            </div>
+                            <div class="machine_data_state_hide w-100 mt-2">
+                                <div class="mb-2">
+                                    <label class="d-block mb-1" for="">客訴狀況</label>
+                                    <input class="w-100" type="text">
+                                </div>
+                                <div class="mb-2">
+                                    <label class="d-block mb-1" for="">溝通過程</label>
+                                    <input class="w-100" type="text">
+                                </div>
+                                <div class="">
+                                    <label class="d-block mb-1" for="">處理結果</label>
+                                    <input class="w-100" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-common d-flex flex-wrap mb-3">
+                            <h4 class="list_title-second">照片</h4>
+                            <div class="list-common_second">
+                                <div class="machine_pic-upload d-flex align-items-center">
+                                    <div class="pic cover-box"><img class="cover-box_img" src="./public/img/machine-1.png" alt=""></div>
+                                    <div class="select d-flex flex-wrap select-small select-deep">
+                                        <div class="select_item d-flex align-items-center justify-content-between">
+                                            <span>外觀</span>
+                                        </div>
+                                        <div class="select_item d-flex align-items-center justify-content-between">
+                                          <span>型號</span>
+                                        </div>
+                                        <div class="select_item d-flex align-items-center justify-content-between">
+                                          <span>洗前</span>
+                                        </div>
+                                        <div class="select_item d-flex align-items-center justify-content-between">
+                                            <span>洗後</span>
+                                        </div>
+                                        <div class="select_item d-flex align-items-center justify-content-between">
+                                            <span>其他</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="machine_pic-upload d-flex align-items-center">
+                                    <div class="pic cover-box">
+                                        <img class="plus" src="./public/img/icon_plus3.svg" alt="">
+                                        <input type="file">
+                                    </div>
+                                    <div class="select d-flex flex-wrap select-small select-deep">
+                                        <div class="select_item d-flex align-items-center justify-content-between">
+                                            <span>外觀</span>
+                                        </div>
+                                        <div class="select_item d-flex align-items-center justify-content-between">
+                                          <span>型號</span>
+                                        </div>
+                                        <div class="select_item d-flex align-items-center justify-content-between">
+                                          <span>洗前</span>
+                                        </div>
+                                        <div class="select_item d-flex align-items-center justify-content-between">
+                                            <span>洗後</span>
+                                        </div>
+                                        <div class="select_item d-flex align-items-center justify-content-between">
+                                            <span>其他</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="fixed-btn">
+        <div class="fixed-btn_link fixed-btn_link-data" data-target="#data">
+            <svg class="fixed-btn_icon" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8331 2.76309C13.275 3.14978 13.3198 3.82152 12.9331 4.26345C12.6733 4.56031 12.4095 4.83889 12.1471 5.11597C11.1733 6.14429 10.219 7.15199 9.56426 8.99714C9.42149 9.39951 9.37326 10.0859 9.41373 11.1089C9.43759 11.712 9.48583 12.3423 9.53779 13.0213C9.57325 13.4847 9.61045 13.9708 9.64283 14.4864C9.79299 16.8779 9.83407 19.763 8.61709 21.9362C7.4199 24.074 5.44506 25.941 4.42112 26.909C4.37712 26.9506 4.33488 26.9905 4.29453 27.0288C3.86823 27.4326 3.19525 27.4144 2.79139 26.9881C2.38753 26.5619 2.40571 25.8889 2.83201 25.485C2.85917 25.4593 2.88688 25.4331 2.91512 25.4063C3.95903 24.418 5.72766 22.7436 6.76167 20.8971C7.63314 19.3409 7.67422 17.0684 7.52047 14.6196C7.49242 14.1728 7.45731 13.7108 7.42248 13.2525C7.36775 12.5324 7.31372 11.8215 7.28886 11.193C7.2485 10.1728 7.26652 9.11353 7.56016 8.28601C8.38025 5.97483 9.70024 4.59156 10.7016 3.54221C10.9322 3.30056 11.1459 3.07661 11.3327 2.86312C11.7194 2.42118 12.3911 2.3764 12.8331 2.76309Z" fill="#B87A0C"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9849 2.76309C20.4268 3.14978 20.4716 3.82152 20.0849 4.26345C19.8252 4.56031 19.5614 4.83889 19.299 5.11597C18.3251 6.14429 17.3709 7.15199 16.7161 8.99714C16.5733 9.39951 16.5251 10.0859 16.5656 11.1089C16.5894 11.712 16.6377 12.3423 16.6896 13.0213C16.7251 13.4847 16.7623 13.9708 16.7947 14.4864C16.9448 16.8779 16.9859 19.763 15.7689 21.9362C14.5718 24.074 12.5969 25.941 11.573 26.909C11.529 26.9506 11.4867 26.9905 11.4464 27.0288C11.0201 27.4326 10.3471 27.4144 9.94324 26.9881C9.53938 26.5619 9.55757 25.8889 9.98387 25.485C10.011 25.4593 10.0387 25.4331 10.067 25.4063C11.1109 24.418 12.8795 22.7436 13.9135 20.8971C14.785 19.3409 14.8261 17.0684 14.6723 14.6196C14.6443 14.1728 14.6092 13.7108 14.5743 13.2525C14.5196 12.5324 14.4656 11.8215 14.4407 11.193C14.4004 10.1728 14.4184 9.11353 14.712 8.28601C15.5321 5.97483 16.8521 4.59156 17.8534 3.54221C18.084 3.30056 18.2977 3.07661 18.4846 2.86312C18.8712 2.42118 19.543 2.3764 19.9849 2.76309Z" fill="#B87A0C"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M27.1369 2.76309C27.5788 3.14978 27.6236 3.82152 27.2369 4.26345C26.9772 4.56031 26.7133 4.83889 26.4509 5.11597C25.4771 6.14429 24.5228 7.15199 23.8681 8.99714C23.7253 9.39951 23.6771 10.0859 23.7176 11.1089C23.7414 11.712 23.7897 12.3423 23.8416 13.0213C23.8771 13.4847 23.9143 13.9708 23.9467 14.4864C24.0968 16.8779 24.1379 19.763 22.9209 21.9362C21.7237 24.074 19.7489 25.941 18.725 26.909C18.681 26.9506 18.6387 26.9905 18.5984 27.0288C18.1721 27.4326 17.4991 27.4144 17.0952 26.9881C16.6914 26.5619 16.7095 25.8889 17.1358 25.485C17.163 25.4593 17.1907 25.4331 17.219 25.4063C18.2629 24.418 20.0315 22.7436 21.0655 20.8971C21.937 19.3409 21.9781 17.0684 21.8243 14.6196C21.7963 14.1728 21.7611 13.7108 21.7263 13.2525C21.6716 12.5324 21.6176 11.8215 21.5927 11.193C21.5523 10.1728 21.5704 9.11353 21.864 8.28601C22.6841 5.97483 24.0041 4.59156 25.0054 3.54221C25.236 3.30056 25.4497 3.07661 25.6365 2.86312C26.0232 2.42118 26.695 2.3764 27.1369 2.76309Z" fill="#B87A0C"/>
+            </svg>
+            <p>基本資料</p>
+        </div>
+        <div class="fixed-btn_link fixed-btn_link-contact" data-target="#contact-customer">
+            <svg class="fixed-btn_icon" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.9992 16.7801C13.4387 16.7801 11.9133 16.3173 10.6158 15.4504C9.31825 14.5834 8.30697 13.3511 7.70979 11.9094C7.11261 10.4677 6.95636 8.88129 7.2608 7.35077C7.56524 5.82025 8.31669 4.41438 9.42013 3.31094C10.5236 2.2075 11.9294 1.45605 13.46 1.15161C14.9905 0.84717 16.5769 1.00342 18.0186 1.6006C19.4603 2.19778 20.6926 3.20906 21.5596 4.50657C22.4265 5.80408 22.8893 7.32954 22.8893 8.89004C22.887 10.9819 22.055 12.9874 20.5758 14.4666C19.0966 15.9458 17.0911 16.7778 14.9992 16.7801V16.7801ZM14.9992 2.73045C13.7806 2.73045 12.5894 3.09183 11.5762 3.76887C10.563 4.44592 9.77332 5.40823 9.30704 6.53409C8.84077 7.65996 8.71885 8.89881 8.95669 10.094C9.19453 11.2891 9.78146 12.3869 10.6432 13.2485C11.505 14.1101 12.6029 14.6967 13.7982 14.9343C14.9934 15.1719 16.2322 15.0497 17.358 14.5831C18.4837 14.1166 19.4458 13.3267 20.1226 12.3133C20.7994 11.3 21.1605 10.1086 21.1603 8.89004C21.1583 7.25675 20.5086 5.69093 19.3535 4.53615C18.1985 3.38138 16.6325 2.73198 14.9992 2.73045V2.73045Z" fill="#B87A0C"/>
+                <path d="M26.6355 29.1468C26.4062 29.1468 26.1863 29.0557 26.0242 28.8936C25.8621 28.7315 25.771 28.5116 25.771 28.2823V27.2953C25.7691 25.7729 25.1633 24.3133 24.0867 23.2369C23.01 22.1605 21.5503 21.5551 20.0278 21.5536H9.97075C8.44841 21.5551 6.98887 22.1605 5.91241 23.237C4.83595 24.3134 4.23053 25.773 4.22901 27.2953V28.2823C4.22901 28.5116 4.13793 28.7315 3.9758 28.8936C3.81367 29.0557 3.59378 29.1468 3.3645 29.1468C3.13522 29.1468 2.91533 29.0557 2.75321 28.8936C2.59108 28.7315 2.5 28.5116 2.5 28.2823V27.2953C2.50229 25.3147 3.29012 23.4158 4.69066 22.0152C6.0912 20.6147 7.99009 19.8269 9.97075 19.8246H20.0278C22.0086 19.8269 23.9076 20.6147 25.3084 22.0152C26.7092 23.4157 27.4973 25.3145 27.5 27.2953V28.2823C27.5 28.5116 27.4089 28.7315 27.2468 28.8936C27.0847 29.0557 26.8648 29.1468 26.6355 29.1468V29.1468Z" fill="#B87A0C"/>
+            </svg>    
+            <p>聯絡顧客</p>
+        </div>
+        <div class="fixed-btn_link fixed-btn_link-return" data-target="#return-result">
+            <svg class="fixed-btn_icon" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.6296 3.5H6.75181C5.62416 3.5 4.54269 3.94796 3.74533 4.74532C2.94796 5.54269 2.5 6.62416 2.5 7.7518L2.5 22.3194C2.50511 23.446 2.95491 24.525 3.75154 25.3216C4.54817 26.1183 5.62716 26.5681 6.75375 26.5732H23.2462C24.3739 26.5716 25.455 26.123 26.2524 25.3256C27.0498 24.5282 27.4985 23.4471 27.5 22.3194V11.3704C27.5 11.2319 27.4728 11.0947 27.4198 10.9668C27.3668 10.8388 27.2891 10.7225 27.1912 10.6245L20.3696 3.80883C20.1732 3.61247 19.9073 3.5015 19.6296 3.5V3.5ZM20.5872 6.53395L24.4622 10.4187H23.0617C22.4046 10.4171 21.7749 10.1548 21.3109 9.68942C20.847 9.22401 20.5867 8.59349 20.5872 7.93633V6.53395ZM25.7208 22.3117C25.7208 22.968 25.4601 23.5974 24.996 24.0614C24.532 24.5255 23.9025 24.7862 23.2462 24.7862H6.75181C6.09601 24.7852 5.46739 24.5241 5.00385 24.0602C4.54032 23.5963 4.27971 22.9675 4.27919 22.3117V7.74404C4.28125 7.08961 4.54266 6.46268 5.00615 6.00066C5.46963 5.53863 6.09737 5.27919 6.75181 5.27919H18.8157V7.93827C18.8157 9.06592 19.2637 10.1474 20.0611 10.9448C20.8584 11.7421 21.9399 12.1901 23.0676 12.1901H25.7266L25.7208 22.3117Z" fill="#B87A0C"/>
+                <path d="M15.3059 9.65534H7.89389C7.66208 9.65534 7.43976 9.56325 7.27584 9.39934C7.11192 9.23542 7.01984 9.0131 7.01984 8.78128C7.01984 8.54947 7.11192 8.32715 7.27584 8.16323C7.43976 7.99931 7.66208 7.90723 7.89389 7.90723H15.3059C15.5377 7.90723 15.76 7.99931 15.924 8.16323C16.0879 8.32715 16.18 8.54947 16.18 8.78128C16.18 9.0131 16.0879 9.23542 15.924 9.39934C15.76 9.56325 15.5377 9.65534 15.3059 9.65534V9.65534Z" fill="#B87A0C"/>
+                <path d="M15.3059 13.8236H7.89389C7.66208 13.8236 7.43976 13.7315 7.27584 13.5675C7.11192 13.4036 7.01984 13.1813 7.01984 12.9495C7.01984 12.7177 7.11192 12.4954 7.27584 12.3314C7.43976 12.1675 7.66208 12.0754 7.89389 12.0754H15.3059C15.5377 12.0754 15.76 12.1675 15.924 12.3314C16.0879 12.4954 16.18 12.7177 16.18 12.9495C16.18 13.1813 16.0879 13.4036 15.924 13.5675C15.76 13.7315 15.5377 13.8236 15.3059 13.8236V13.8236Z" fill="#B87A0C"/>
+                <path d="M22.1061 17.9899H7.89389C7.66208 17.9899 7.43976 17.8978 7.27584 17.7339C7.11192 17.57 7.01984 17.3477 7.01984 17.1159C7.01984 16.8841 7.11192 16.6617 7.27584 16.4978C7.43976 16.3339 7.66208 16.2418 7.89389 16.2418H22.1061C22.3379 16.2418 22.5602 16.3339 22.7241 16.4978C22.888 16.6617 22.9801 16.8841 22.9801 17.1159C22.9801 17.3477 22.888 17.57 22.7241 17.7339C22.5602 17.8978 22.3379 17.9899 22.1061 17.9899Z" fill="#B87A0C"/>
+                <path d="M22.1061 22.1582H7.89389C7.66208 22.1582 7.43976 22.0661 7.27584 21.9022C7.11192 21.7383 7.01984 21.516 7.01984 21.2842C7.01984 21.0523 7.11192 20.83 7.27584 20.6661C7.43976 20.5022 7.66208 20.4101 7.89389 20.4101H22.1061C22.3379 20.4101 22.5602 20.5022 22.7241 20.6661C22.888 20.83 22.9801 21.0523 22.9801 21.2842C22.9801 21.516 22.888 21.7383 22.7241 21.9022C22.5602 22.0661 22.3379 22.1582 22.1061 22.1582Z" fill="#B87A0C"/>
+            </svg>
+            <p>回報結果</p>
+        </div>
+    </div> -->
+
+    <footer>版權所有©2022 小川職人</footer>
+
+
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/common.js"></script>
+
+    <script>
+        let input = document.querySelector('.upload-btn');
+        input.addEventListener('change',function(e){
+            readURL(e.target);
+        });
+        function readURL(input) {
+            let img = document.querySelector('#receipt_pic');
+            let btn = document.querySelector('.re-upload');
+            let upload = document.querySelector('.upload-btn');
+            if(input.files && input.files[0]){
+                let reader = new FileReader();
+                reader.onload = function (e) {
+                    img.setAttribute('src', '');
+                    img.setAttribute('src', e.target.result);
+                    img.style="opacity:1";
+                    btn.style="display:block";
+                    upload.style="display:none";
+                }
+            reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        let reupload = document.querySelector('.re-upload');
+        reupload.addEventListener('change',function(e){
+            readURL_reset(e.target);
+        });
+        function readURL_reset(reupload) {
+            let img = document.querySelector('#receipt_pic');
+            if(input.files && input.files[0]){
+                let reader = new FileReader();
+                reader.onload = function (e) {
+                    img.setAttribute('src', '');
+                    img.setAttribute('src', e.target.result);
+                }
+                reader.readAsDataURL(reupload.files[0]);
+            }
+        }
+    </script>
+</body>
+</html>

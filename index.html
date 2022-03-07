@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <title>小川職人後台</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header-page mb-4">
+            <img class="logo-page" src="./public/img/logo.png" alt="">
+            <div class="menu">
+                <div class="bar bar-top"></div>
+                <div class="bar bar-middle"></div>
+                <div class="bar bar-bottom"></div>
+            </div>
+            <nav class="nav-main">
+                <ul>
+                    <li><a href="">公告欄</a></li>
+                    <li><a href="">補給申請</a></li>
+                    <li><a href="">原廠聯絡資訊</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="box-common mb-30">
+            <h2 class="box_title">本月</h2>
+            <div class="box-common_content">
+                <!-- 狀態顏色：color-great良好，color-normal普通，color-bad差 -->
+                <div class="row">
+                    <div class="col-4">
+                        <p class="color-gray font-14 text-center m-0">評論</p>
+                        <p class="color-great font-22 text-center m-0 fw-bold">80%</p>
+                    </div>
+                    <div class="col-4">
+                        <p class="color-gray font-14 text-center m-0">異常</p>
+                        <p class="color-normal font-22 text-center m-0 fw-bold">4</p>
+                    </div>
+                    <div class="col-4">
+                        <p class="color-gray font-14 text-center m-0">客訴</p>
+                        <p class="color-bad font-22 text-center m-0 fw-bold">10</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-common mb-30">
+            <h2 class="box_title">未讀公告</h2>
+            <div class="box-common_content announce">
+                <a href="" class="d-flex aligm-items-center announce_content not-read">
+                    <div class="tag">服務</div>
+                    <span>小川好品質的秘訣</span>
+                    <svg class="arrow" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L6.53846 7L1 13" stroke="#2E567A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="" class="d-flex aligm-items-center announce_content not-read">
+                    <div class="tag">技術</div>
+                    <span>法律顧問證書</span>
+                    <svg class="arrow" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L6.53846 7L1 13" stroke="#2E567A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="" class="d-flex aligm-items-center announce_content not-read">
+                    <div class="tag">其他</div>
+                    <span>小川專業服務項目</span>
+                    <svg class="arrow" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L6.53846 7L1 13" stroke="#2E567A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="case">
+            <div class="box-common mb-30">
+                <div class="box-common_content">
+                    <div class="d-flex align-items-center case_content mb-4">
+                        <h3 class="font-22 color-blue m-0">09:30 | 冷2滾1 </h3>
+                        <div class="case_btn d-flex flex-wrap align-items-center justify-content-between">
+                            <a href="./case-data.html">
+                                <svg class="icon_inform" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_242_2292)">
+                                        <path d="M12.499 1.72295C14.6309 1.72257 16.715 2.35442 18.4877 3.53857C20.2604 4.72273 21.6422 6.40601 22.4582 8.37551C23.2742 10.345 23.4878 12.5123 23.072 14.6032C22.6561 16.6941 21.6296 18.6147 20.1222 20.1222C18.6147 21.6296 16.6941 22.6562 14.6032 23.072C12.5123 23.4878 10.345 23.2742 8.3755 22.4582C6.406 21.6422 4.72273 20.2604 3.53857 18.4877C2.35441 16.715 1.72257 14.6309 1.72295 12.499C1.72599 9.64198 2.8623 6.9028 4.88255 4.88255C6.9028 2.8623 9.64197 1.72599 12.499 1.72295ZM12.499 1.4662e-07C10.0265 1.75613e-07 7.60949 0.733217 5.55368 2.10692C3.49787 3.48063 1.89559 5.43313 0.949478 7.71749C0.003367 10.0019 -0.244082 12.5155 0.238425 14.9405C0.720933 17.3655 1.91172 19.5929 3.6602 21.3411C5.40869 23.0894 7.63632 24.2798 10.0614 24.7619C12.4865 25.2441 15.0001 24.9963 17.2843 24.0498C19.5685 23.1033 21.5207 21.5007 22.8941 19.4447C24.2675 17.3887 25.0004 14.9716 25 12.499C25 10.8575 24.6766 9.232 24.0484 7.71542C23.4201 6.19885 22.4993 4.82088 21.3384 3.66021C20.1776 2.49954 18.7995 1.57891 17.2828 0.950884C15.7661 0.322861 14.1406 -0.000251279 12.499 1.4662e-07Z" fill="#01B7F5"/>
+                                        <path d="M11.1743 8.71234V6.70032H13.8238V8.71234H11.1743ZM11.1743 18.3073V9.95478H13.8238V18.3073H11.1743Z" fill="#01B7F5"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_242_2292">
+                                            <rect width="25" height="25" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <a href="./return.html" class="rounded-pill btn-return">回報</a>
+                        </div>
+                    </div>
+                    <div class="list-common d-flex flex-wrap align-items-center mb-2">
+                        <div class="list_title d-flex align-items-center">
+                            <img src="./public/img/icon_calendar.svg" alt="">
+                            <h4>服務時間</h4>
+                        </div>
+                        <p class="list_content">2021/12/03  09:30</p>
+                    </div>
+                    <div class="list-common d-flex flex-wrap align-items-center mb-2">
+                        <div class="list_title d-flex align-items-center">
+                            <img src="./public/img/icon_person.svg" alt="">
+                            <h4>客戶稱呼</h4>
+                        </div>
+                        <p class="list_content">王先生</p>
+                    </div>
+                    <div class="list-common d-flex flex-wrap align-items-center mb-2 phone">
+                        <div class="list_title d-flex align-items-center">
+                            <img src="./public/img/icon_phone2.svg" alt="">
+                            <h4>客戶電話</h4>
+                        </div>
+                        <p class="list_content">0908-934-777</p>
+                        <div class="contact d-flex align-items-center justify-content-between">
+                            <a href=""><img src="./public/img/icon_phone3-lightblue.svg" alt=""></a>
+                            <a href=""><img src="./public/img/icon_message-lightblue.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="list-common d-flex flex-wrap align-items-center mb-2 address">
+                        <div class="list_title d-flex align-items-center">
+                            <img src="./public/img/icon_pin.svg" alt="">
+                            <h4>服務地址</h4>
+                        </div>
+                        <p class="list_content">台北市中正區衡陽路36號8樓之1</p>
+                        <div class="contact d-flex align-items-center justify-content-between">
+                            <a href=""><img src="./public/img/icon_arrow2-lightblue.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="list-common d-flex flex-wrap align-items-center mb-2">
+                        <div class="list_title d-flex align-items-center">
+                            <img src="./public/img/icon_fix.svg" alt="">
+                            <h4>協作人員</h4>
+                        </div>
+                        <p class="list_content">葉大雄、李小華</p>
+                    </div>
+                    <div class="case_table mb-2">
+                        <div class="case_table_title d-flex align-items-center justify-content-between">
+                            <span class="case_table_item">項目</span>
+                            <span class="case_table_num">數量</span>
+                        </div>
+                        <div class="case_table_content mb-2 d-flex align-items-center justify-content-between">
+                            <span class="case_table_item">分離式冷氣</span>
+                            <span class="case_table_num">1</span>
+                        </div>
+                        <div class="case_table_content d-flex align-items-center justify-content-between">
+                            <span class="case_table_item">直立式洗衣機</span>
+                            <span class="case_table_num">1</span>
+                        </div>
+                    </div>
+                    <div class="list-common d-flex flex-wrap align-items-center mb-2 long-text">
+                        <div class="list_title d-flex align-items-center">
+                            <img src="./public/img/icon_problem.svg" alt="">
+                            <h4>服務前問題</h4>
+                        </div>
+                        <p class="list_content">冷氣不會冷，夏天快被烤焦了QQ</p>
+                    </div>
+                    <div class="list-common d-flex flex-wrap align-items-center mb-2 long-text">
+                        <div class="list_title d-flex align-items-center">
+                            <img src="./public/img/icon_paper.svg" alt="">
+                            <h4>備註</h4>
+                        </div>
+                        <p class="list_content">日立，有挑高，需注意防護</p>
+                    </div>
+                    <div class="pic d-flex flex-wrap">
+                        <div class="pic_box">
+                            <img src="./public/img/pic1.png" alt="">
+                            <div class="pic_mask"></div>
+                        </div>
+                        <div class="pic_box">
+                            <img src="./public/img/pic2.png" alt="">
+                            <div class="pic_mask"></div>
+                        </div>
+                        <div class="pic_box">
+                            <img src="./public/img/pic3.png" alt="">
+                            <div class="pic_mask"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-common mb-30">
+                <div class="box-common_content case-abnormal case-state">
+                    <div class="d-flex flex-wrap align-items-center case_content mb-4">
+                        <div class="tag tag-abnormal">異常</div>
+                        <h3 class="font-22 color-blue m-0">09:30 | 冷2滾1 </h3>
+                        <div class="case_btn d-flex flex-wrap align-items-center justify-content-sm-between justify-content-end">
+                            <a href="./case-data.html">
+                                <svg class="icon_inform" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_242_2292)">
+                                        <path d="M12.499 1.72295C14.6309 1.72257 16.715 2.35442 18.4877 3.53857C20.2604 4.72273 21.6422 6.40601 22.4582 8.37551C23.2742 10.345 23.4878 12.5123 23.072 14.6032C22.6561 16.6941 21.6296 18.6147 20.1222 20.1222C18.6147 21.6296 16.6941 22.6562 14.6032 23.072C12.5123 23.4878 10.345 23.2742 8.3755 22.4582C6.406 21.6422 4.72273 20.2604 3.53857 18.4877C2.35441 16.715 1.72257 14.6309 1.72295 12.499C1.72599 9.64198 2.8623 6.9028 4.88255 4.88255C6.9028 2.8623 9.64197 1.72599 12.499 1.72295ZM12.499 1.4662e-07C10.0265 1.75613e-07 7.60949 0.733217 5.55368 2.10692C3.49787 3.48063 1.89559 5.43313 0.949478 7.71749C0.003367 10.0019 -0.244082 12.5155 0.238425 14.9405C0.720933 17.3655 1.91172 19.5929 3.6602 21.3411C5.40869 23.0894 7.63632 24.2798 10.0614 24.7619C12.4865 25.2441 15.0001 24.9963 17.2843 24.0498C19.5685 23.1033 21.5207 21.5007 22.8941 19.4447C24.2675 17.3887 25.0004 14.9716 25 12.499C25 10.8575 24.6766 9.232 24.0484 7.71542C23.4201 6.19885 22.4993 4.82088 21.3384 3.66021C20.1776 2.49954 18.7995 1.57891 17.2828 0.950884C15.7661 0.322861 14.1406 -0.000251279 12.499 1.4662e-07Z" fill="#01B7F5"/>
+                                        <path d="M11.1743 8.71234V6.70032H13.8238V8.71234H11.1743ZM11.1743 18.3073V9.95478H13.8238V18.3073H11.1743Z" fill="#01B7F5"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_242_2292">
+                                            <rect width="25" height="25" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <a href="./return.html" class="rounded-pill btn-return">回報</a>
+                        </div>
+                    </div>
+                    <div class="list-common d-flex flex-wrap align-items-center mb-2">
+                        <div class="list_title d-flex align-items-center">
+                            <img src="./public/img/icon_calendar.svg" alt="">
+                            <h4>服務時間</h4>
+                        </div>
+                        <p class="list_content">2021/12/03  09:30</p>
+                    </div>
+                    <div class="list-common d-flex flex-wrap align-items-center mb-2">
+                        <div class="list_title d-flex align-items-center">
+                            <img src="./public/img/icon_person.svg" alt="">
+                            <h4>客戶稱呼</h4>
+                        </div>
+                        <p class="list_content">王先生</p>
+                    </div>
+                    <div class="list-common d-flex flex-wrap align-items-center mb-2 phone">
+                        <div class="list_title d-flex align-items-center">
+                            <img src="./public/img/icon_phone2.svg" alt="">
+                            <h4>客戶電話</h4>
+                        </div>
+                        <p class="list_content">0908-934-777</p>
+                        <div class="contact d-flex align-items-center justify-content-between">
+                            <a href=""><img src="./public/img/icon_phone3-lightblue.svg" alt=""></a>
+                            <a href=""><img src="./public/img/icon_message-lightblue.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="list-common d-flex flex-wrap align-items-center mb-2 address">
+                        <div class="list_title d-flex align-items-center">
+                            <img src="./public/img/icon_pin.svg" alt="">
+                            <h4>服務地址</h4>
+                        </div>
+                        <p class="list_content">台北市中正區衡陽路36號8樓之1</p>
+                        <div class="contact d-flex align-items-center justify-content-between">
+                            <a href=""><img src="./public/img/icon_arrow2-lightblue.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="list-common d-flex flex-wrap align-items-center mb-2">
+                        <div class="list_title d-flex align-items-center">
+                            <img src="./public/img/icon_fix.svg" alt="">
+                            <h4>協作人員</h4>
+                        </div>
+                        <p class="list_content">葉大雄、李小華</p>
+                    </div>
+                    <div class="case_table mb-3">
+                        <div class="case_table_title d-flex align-items-center justify-content-between">
+                            <span class="case_table_item">項目</span>
+                            <span class="case_table_num">數量</span>
+                        </div>
+                        <div class="case_table_content mb-2 d-flex align-items-center justify-content-between">
+                            <span class="case_table_item">分離式冷氣</span>
+                            <span class="case_table_num">1</span>
+                        </div>
+                        <div class="case_table_content d-flex align-items-center justify-content-between">
+                            <span class="case_table_item abnormal state">
+                                <svg class="icon_alert" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.00309 1.1109C8.13281 1.11007 8.2604 1.14397 8.37261 1.20908C8.48482 1.27419 8.57756 1.36814 8.64121 1.48119L11.7146 6.80468L14.7892 12.1294C14.8542 12.242 14.8884 12.3698 14.8884 12.4998C14.8884 12.6298 14.8541 12.7576 14.7891 12.8702C14.724 12.9828 14.6305 13.0763 14.5178 13.1412C14.4052 13.2062 14.2774 13.2403 14.1474 13.2403H1.85262C1.72258 13.2403 1.59482 13.2062 1.48217 13.1412C1.36952 13.0763 1.27596 12.9828 1.21091 12.8702C1.14585 12.7576 1.11159 12.6298 1.11157 12.4998C1.11155 12.3698 1.14577 12.242 1.21079 12.1294L4.28417 6.80468L7.36126 1.48119C7.42531 1.36768 7.51866 1.27344 7.63155 1.20831C7.74445 1.14317 7.87276 1.10954 8.00309 1.1109V1.1109ZM8.00309 3.85787e-05C7.67754 -0.00194505 7.35733 0.0827549 7.07534 0.245441C6.79335 0.408127 6.55975 0.642936 6.39851 0.925756L3.32636 6.24925L0.248045 11.574C0.0854976 11.8555 -5.20459e-05 12.1749 2.37548e-08 12.5C5.20934e-05 12.8251 0.0857041 13.1444 0.248342 13.4259C0.41098 13.7074 0.644869 13.9411 0.926488 14.1035C1.20811 14.2659 1.52753 14.3513 1.85262 14.3511H14.1474C14.4725 14.3513 14.7919 14.2659 15.0735 14.1035C15.3551 13.9411 15.589 13.7074 15.7517 13.4259C15.9143 13.1444 15.9999 12.8251 16 12.5C16.0001 12.1749 15.9145 11.8555 15.752 11.574L12.6786 6.24925L9.60643 0.925756C9.44529 0.64285 9.2117 0.40797 8.92969 0.245271C8.64768 0.0825722 8.32742 -0.0020735 8.00185 3.85787e-05H8.00309Z" fill="#CD3B3B"/>
+                                    <path d="M8.50913 9.27186H7.49702L7.11932 5.19006H8.88806L8.50913 9.27186ZM7.28348 11.3035V9.92356H8.7239V11.3035H7.28348Z" fill="#CD3B3B"/>
+                                </svg>
+                                直立式洗衣機
+                            </span>
+                            <span class="case_table_num">1</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center flex-wrap mb-3">
+                        <div class="case-state_title abnormal">申訴時間</div>
+                        <span class="case-state_content abnormal">2021/12/01 13:32</span>
+                    </div>
+                    <div class="d-flex align-items-center flex-wrap mb-3">
+                        <div class="case-state_title abnormal">異常狀況</div>
+                        <span class="case-state_content abnormal">洗後滴水</span>
+                    </div>
+                    <div class="list-common d-flex flex-wrap align-items-center mb-2 long-text">
+                        <div class="list_title d-flex align-items-center">
+                            <img src="./public/img/icon_problem.svg" alt="">
+                            <h4>服務前問題</h4>
+                        </div>
+                        <p class="list_content">冷氣不會冷，夏天快被烤焦了QQ</p>
+                    </div>
+                    <div class="list-common d-flex flex-wrap align-items-center mb-2 long-text">
+                        <div class="list_title d-flex align-items-center">
+                            <img src="./public/img/icon_paper.svg" alt="">
+                            <h4>備註</h4>
+                        </div>
+                        <p class="list_content">日立，有挑高，需注意防護</p>
+                    </div>
+                    <div class="pic d-flex flex-wrap">
+                        <div class="pic_box">
+                            <img src="./public/img/pic1.png" alt="">
+                            <div class="pic_mask"></div>
+                        </div>
+                        <div class="pic_box">
+                            <img src="./public/img/pic2.png" alt="">
+                            <div class="pic_mask"></div>
+                        </div>
+                        <div class="pic_box">
+                            <img src="./public/img/pic3.png" alt="">
+                            <div class="pic_mask"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-common mb-30">
+                <div class="box-common_content case-custom case-state">
+                    <div class="d-flex flex-wrap align-items-center case_content mb-4">
+                        <div class="tag tag-custom">客訴</div>
+                        <h3 class="font-22 color-blue m-0">09:30 | 冷2滾1 </h3>
+                        <div class="case_btn d-flex flex-wrap align-items-center justify-content-sm-between justify-content-end">
+                            <a href="./case-data.html">
+                                <svg class="icon_inform" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_242_2292)">
+                                        <path d="M12.499 1.72295C14.6309 1.72257 16.715 2.35442 18.4877 3.53857C20.2604 4.72273 21.6422 6.40601 22.4582 8.37551C23.2742 10.345 23.4878 12.5123 23.072 14.6032C22.6561 16.6941 21.6296 18.6147 20.1222 20.1222C18.6147 21.6296 16.6941 22.6562 14.6032 23.072C12.5123 23.4878 10.345 23.2742 8.3755 22.4582C6.406 21.6422 4.72273 20.2604 3.53857 18.4877C2.35441 16.715 1.72257 14.6309 1.72295 12.499C1.72599 9.64198 2.8623 6.9028 4.88255 4.88255C6.9028 2.8623 9.64197 1.72599 12.499 1.72295ZM12.499 1.4662e-07C10.0265 1.75613e-07 7.60949 0.733217 5.55368 2.10692C3.49787 3.48063 1.89559 5.43313 0.949478 7.71749C0.003367 10.0019 -0.244082 12.5155 0.238425 14.9405C0.720933 17.3655 1.91172 19.5929 3.6602 21.3411C5.40869 23.0894 7.63632 24.2798 10.0614 24.7619C12.4865 25.2441 15.0001 24.9963 17.2843 24.0498C19.5685 23.1033 21.5207 21.5007 22.8941 19.4447C24.2675 17.3887 25.0004 14.9716 25 12.499C25 10.8575 24.6766 9.232 24.0484 7.71542C23.4201 6.19885 22.4993 4.82088 21.3384 3.66021C20.1776 2.49954 18.7995 1.57891 17.2828 0.950884C15.7661 0.322861 14.1406 -0.000251279 12.499 1.4662e-07Z" fill="#01B7F5"/>
+                                        <path d="M11.1743 8.71234V6.70032H13.8238V8.71234H11.1743ZM11.1743 18.3073V9.95478H13.8238V18.3073H11.1743Z" fill="#01B7F5"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_242_2292">
+                                            <rect width="25" height="25" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <a href="./return.html" class="rounded-pill btn-return">回報</a>
+                        </div>
+                    </div>
+                    <div class="list-common d-flex flex-wrap align-items-center mb-2">
+                        <div class="list_title d-flex align-items-center">
+                            <img src="./public/img/icon_calendar.svg" alt="">
+                            <h4>服務時間</h4>
+                        </div>
+                        <p class="list_content">2021/12/03  09:30</p>
+                    </div>
+                    <div class="list-common d-flex flex-wrap align-items-center mb-2">
+                        <div class="list_title d-flex align-items-center">
+                            <img src="./public/img/icon_person.svg" alt="">
+                            <h4>客戶稱呼</h4>
+                        </div>
+                        <p class="list_content">王先生</p>
+                    </div>
+                    <div class="list-common d-flex flex-wrap align-items-center mb-2 phone">
+                        <div class="list_title d-flex align-items-center">
+                            <img src="./public/img/icon_phone2.svg" alt="">
+                            <h4>客戶電話</h4>
+                        </div>
+                        <p class="list_content">0908-934-777</p>
+                        <div class="contact d-flex align-items-center justify-content-between">
+                            <a href=""><img src="./public/img/icon_phone3-lightblue.svg" alt=""></a>
+                            <a href=""><img src="./public/img/icon_message-lightblue.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="list-common d-flex flex-wrap align-items-center mb-2 address">
+                        <div class="list_title d-flex align-items-center">
+                            <img src="./public/img/icon_pin.svg" alt="">
+                            <h4>服務地址</h4>
+                        </div>
+                        <p class="list_content">台北市中正區衡陽路36號8樓之1</p>
+                        <div class="contact d-flex align-items-center justify-content-between">
+                            <a href=""><img src="./public/img/icon_arrow2-lightblue.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="list-common d-flex flex-wrap align-items-center mb-2">
+                        <div class="list_title d-flex align-items-center">
+                            <img src="./public/img/icon_fix.svg" alt="">
+                            <h4>協作人員</h4>
+                        </div>
+                        <p class="list_content">葉大雄、李小華</p>
+                    </div>
+                    <div class="case_table mb-3">
+                        <div class="case_table_title d-flex align-items-center justify-content-between">
+                            <span class="case_table_item">項目</span>
+                            <span class="case_table_num">數量</span>
+                        </div>
+                        <div class="case_table_content mb-2 d-flex align-items-center justify-content-between">
+                            <span class="case_table_item">分離式冷氣</span>
+                            <span class="case_table_num">1</span>
+                        </div>
+                        <div class="case_table_content d-flex align-items-center justify-content-between">
+                            <span class="case_table_item custom state">
+                                <svg class="icon_alert" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.00309 1.1109C8.13281 1.11007 8.2604 1.14397 8.37261 1.20908C8.48482 1.27419 8.57756 1.36814 8.64121 1.48119L11.7146 6.80468L14.7892 12.1294C14.8542 12.242 14.8884 12.3698 14.8884 12.4998C14.8884 12.6298 14.8541 12.7576 14.7891 12.8702C14.724 12.9828 14.6305 13.0763 14.5178 13.1412C14.4052 13.2062 14.2774 13.2403 14.1474 13.2403H1.85262C1.72258 13.2403 1.59482 13.2062 1.48217 13.1412C1.36952 13.0763 1.27596 12.9828 1.21091 12.8702C1.14585 12.7576 1.11159 12.6298 1.11157 12.4998C1.11155 12.3698 1.14577 12.242 1.21079 12.1294L4.28417 6.80468L7.36126 1.48119C7.42531 1.36768 7.51866 1.27344 7.63155 1.20831C7.74445 1.14317 7.87276 1.10954 8.00309 1.1109V1.1109ZM8.00309 3.85787e-05C7.67754 -0.00194505 7.35733 0.0827549 7.07534 0.245441C6.79335 0.408127 6.55975 0.642936 6.39851 0.925756L3.32636 6.24925L0.248045 11.574C0.0854976 11.8555 -5.20459e-05 12.1749 2.37548e-08 12.5C5.20934e-05 12.8251 0.0857041 13.1444 0.248342 13.4259C0.41098 13.7074 0.644869 13.9411 0.926488 14.1035C1.20811 14.2659 1.52753 14.3513 1.85262 14.3511H14.1474C14.4725 14.3513 14.7919 14.2659 15.0735 14.1035C15.3551 13.9411 15.589 13.7074 15.7517 13.4259C15.9143 13.1444 15.9999 12.8251 16 12.5C16.0001 12.1749 15.9145 11.8555 15.752 11.574L12.6786 6.24925L9.60643 0.925756C9.44529 0.64285 9.2117 0.40797 8.92969 0.245271C8.64768 0.0825722 8.32742 -0.0020735 8.00185 3.85787e-05H8.00309Z" fill="#CD3B3B"/>
+                                    <path d="M8.50913 9.27186H7.49702L7.11932 5.19006H8.88806L8.50913 9.27186ZM7.28348 11.3035V9.92356H8.7239V11.3035H7.28348Z" fill="#CD3B3B"/>
+                                </svg>
+                                直立式洗衣機
+                            </span>
+                            <span class="case_table_num">1</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center flex-wrap mb-3">
+                        <div class="case-state_title custom">客訴時間</div>
+                        <span class="case-state_content custom">2021/12/01 13:32</span>
+                    </div>
+                    <div class="d-flex align-items-center flex-wrap mb-3">
+                        <div class="case-state_title custom">客訴狀況</div>
+                        <span class="case-state_content custom">洗後滴水</span>
+                    </div>
+                    <div class="list-common d-flex flex-wrap align-items-center mb-2 long-text">
+                        <div class="list_title d-flex align-items-center">
+                            <img src="./public/img/icon_problem.svg" alt="">
+                            <h4>服務前問題</h4>
+                        </div>
+                        <p class="list_content">冷氣不會冷，夏天快被烤焦了QQ</p>
+                    </div>
+                    <div class="list-common d-flex flex-wrap align-items-center mb-2 long-text">
+                        <div class="list_title d-flex align-items-center">
+                            <img src="./public/img/icon_paper.svg" alt="">
+                            <h4>備註</h4>
+                        </div>
+                        <p class="list_content">日立，有挑高，需注意防護</p>
+                    </div>
+                    <div class="pic d-flex flex-wrap">
+                        <div class="pic_box">
+                            <img src="./public/img/pic1.png" alt="">
+                            <div class="pic_mask"></div>
+                        </div>
+                        <div class="pic_box">
+                            <img src="./public/img/pic2.png" alt="">
+                            <div class="pic_mask"></div>
+                        </div>
+                        <div class="pic_box">
+                            <img src="./public/img/pic3.png" alt="">
+                            <div class="pic_mask"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>版權所有©2022 小川職人</footer>
+
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/common.js"></script>
+</body>
+</html>

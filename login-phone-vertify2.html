@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <title>小川職人後台</title>
+</head>
+<body class="login-bg">
+    <header class="header-login"><img class="logo-login" src="./public/img/logo.png" alt=""></header>
+    <div class="login_text">
+        <h1>小川職人管理系統</h1>
+        <div class="login_input">
+            <div class="login_input_content d-flex flex-wrap align-items-center">
+                <label for="">簡訊驗證碼</label>
+                <input class="short" type="number" placeholder="請輸入6位簡訊驗證碼">
+                <div id="count"></div>
+            </div>
+            <div class="login_input_bottom d-flex flex-wrap align-items-end justify-content-between">
+                <a href="./index.html" class="login_btn-send">登入</a>
+                <a href="./index.html" class="login_btn-underline">使用line登入</a>
+            </div>
+        </div>
+    </div>
+    <p class="copyright">版權所有©2022 小川職人</p>
+
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/common.js"></script>
+
+    <script>
+        let setSecond;
+        let count;
+        clearInterval(count);
+        setSecond = 11;
+        count = window.setInterval(function () {
+            setSecond -= 1;
+            var Check_i = document.getElementById("count");
+            var Cal_Minute = Math.floor(Math.floor(setSecond) / 60);
+            var Cal_Second = setSecond % 60;
+            if(Cal_Second<10){
+                Check_i.innerHTML = Cal_Minute + ":0" + Cal_Second;
+            }else {
+                Check_i.innerHTML = Cal_Minute + ":" + Cal_Second;
+            }
+            if (setSecond === 0) {
+                clearInterval(count);
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

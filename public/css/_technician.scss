@@ -1,0 +1,58 @@
+.announce {
+    padding: 0 15px;
+    &_content {
+        padding: 14px 0;
+        border-bottom: 1px solid rgba(194, 218, 231, 0.65);
+        .tag {
+            color: #fff;
+            padding: 2px 10px;
+            border-radius: 5px;
+            transition: $transition-common;
+        }
+        span {
+            width: calc(100% - 55px - 8px);
+            padding: 0 10px;
+            transition: $transition-common;
+        }
+        .arrow {
+            width: 8px;
+            transition: $transition-common;
+        }
+        &.not-read {
+            .tag {
+                background-color: $blue;
+            }
+            span {
+                color: $blue;
+                font-weight: 700;
+            }
+        }
+        &:hover {
+            .tag {
+                background-color: $title;
+            }
+            span {
+                color: $title;
+            }
+            .arrow {
+                path {
+                    stroke:$title;
+                }
+            }
+        }
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+}
+
+.return {
+    &-title {
+        font-size: 24px;
+        margin: 0 0 40px;
+    }
+}
+
+.icon_question {
+    cursor: pointer;
+}
