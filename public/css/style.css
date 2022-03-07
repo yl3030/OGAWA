@@ -1251,14 +1251,14 @@ footer {
   background-color: #fff;
 }
 
-.contact {
+.contact-box {
   position: fixed;
   width: 100vw;
   left: 0;
   bottom: 80px;
 }
 
-.contact_link {
+.contact-box_link {
   width: 90px;
   height: 90px;
   border-radius: 50%;
@@ -1282,13 +1282,13 @@ footer {
   cursor: pointer;
 }
 
-.contact_link img {
+.contact-box_link img {
   width: 30px;
   display: block;
   margin: 0 auto 5px;
 }
 
-.contact_link p {
+.contact-box_link p {
   margin: 0;
   text-align: center;
   color: #1B94D3;
