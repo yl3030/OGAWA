@@ -1,0 +1,88 @@
+.manager-home {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.search {
+    max-width: 640px;
+    width: 100%;
+    select,.input-box {
+        border: 1px solid #7CDEFF;
+        background-color: #fff;
+        box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.15);
+    }
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 200px;
+        background-image: url(../img/icon_arrow-lightblue-down.svg);
+        background-position: calc(100% - 20px) center;
+        background-size: 13px;
+        background-repeat: no-repeat;
+    }
+    .input-box {
+        width: calc(100% - 200px - 15px);
+        border-radius: 15px;
+        input {
+            width: calc(100% - 40px);
+            border: 0;
+            padding-right: 0;
+        }
+        button {
+            padding: 0;
+            width: 40px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 20px;
+            }
+        }
+    }
+}
+
+#calendar {
+        button {
+            background-color: transparent;
+            border: 1px solid #7A939D;
+            color: #7A939D;
+            border-radius: 15px;
+            transition: $transition-common;
+            padding: 10px 20px;
+            span {
+                color: #7A939D;
+                transition: $transition-common;
+            }
+        }
+        .fc-timeGridDay-button,.fc-timeGridWeek-button {
+            margin-left: 10px;
+        }
+        .fc-button-active {
+            background: $btn-active;
+            border: 0;
+            color: #fff;
+            font-weight: 600;
+        }
+        .fc-next-button,.fc-prev-button {
+            padding: 8px 15px;
+        }
+        .fc-prev-button {
+            margin-right: 10px;
+        }
+    .fc {
+        .fc-daygrid-day {
+            &.fc-day-today {
+                background-color: rgba(255,255,255,0.2);
+            }
+        } 
+    }
+    .fc-theme-standard {
+        td, th, .fc-scrollgrid {
+            border: 1px solid #99B5C0;
+        }
+    } 
+}

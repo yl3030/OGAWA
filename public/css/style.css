@@ -177,6 +177,30 @@ button {
           box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
 }
 
+.btn-yellow {
+  background-color: rgba(255, 240, 213, 0.71);
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 13px;
+  padding: 13px 23px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn-yellow img {
+  width: 18px;
+  margin-right: 5px;
+}
+
+.btn-yellow span {
+  color: #B87A0C;
+  font-size: 14px;
+}
+
 .header-login {
   padding: 20px 40px;
 }
@@ -1536,5 +1560,109 @@ footer {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.manager-home {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.search {
+  max-width: 640px;
+  width: 100%;
+}
+
+.search select, .search .input-box {
+  border: 1px solid #7CDEFF;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.15);
+}
+
+.search select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 200px;
+  background-image: url(../img/icon_arrow-lightblue-down.svg);
+  background-position: calc(100% - 20px) center;
+  background-size: 13px;
+  background-repeat: no-repeat;
+}
+
+.search .input-box {
+  width: calc(100% - 200px - 15px);
+  border-radius: 15px;
+}
+
+.search .input-box input {
+  width: calc(100% - 40px);
+  border: 0;
+  padding-right: 0;
+}
+
+.search .input-box button {
+  padding: 0;
+  width: 40px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.search .input-box button img {
+  width: 20px;
+}
+
+#calendar button {
+  background-color: transparent;
+  border: 1px solid #7A939D;
+  color: #7A939D;
+  border-radius: 15px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding: 10px 20px;
+}
+
+#calendar button span {
+  color: #7A939D;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#calendar .fc-timeGridDay-button, #calendar .fc-timeGridWeek-button {
+  margin-left: 10px;
+}
+
+#calendar .fc-button-active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#59DEEF), to(#32B5E6));
+  background: linear-gradient(180deg, #59DEEF 0%, #32B5E6 100%);
+  border: 0;
+  color: #fff;
+  font-weight: 600;
+}
+
+#calendar .fc-next-button, #calendar .fc-prev-button {
+  padding: 8px 15px;
+}
+
+#calendar .fc-prev-button {
+  margin-right: 10px;
+}
+
+#calendar .fc .fc-daygrid-day.fc-day-today {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#calendar .fc-theme-standard td, #calendar .fc-theme-standard th, #calendar .fc-theme-standard .fc-scrollgrid {
+  border: 1px solid #99B5C0;
 }
 /*# sourceMappingURL=style.css.map */
