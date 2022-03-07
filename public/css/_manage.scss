@@ -46,43 +46,112 @@
 }
 
 #calendar {
-        button {
-            background-color: transparent;
-            border: 1px solid #7A939D;
+    button {
+        background-color: transparent;
+        border: 1px solid #7A939D;
+        color: #7A939D;
+        border-radius: 15px;
+        transition: $transition-common;
+        padding: 10px 20px;
+        span {
             color: #7A939D;
-            border-radius: 15px;
             transition: $transition-common;
-            padding: 10px 20px;
-            span {
-                color: #7A939D;
-                transition: $transition-common;
-            }
         }
-        .fc-timeGridDay-button,.fc-timeGridWeek-button {
-            margin-left: 10px;
-        }
-        .fc-button-active {
-            background: $btn-active;
-            border: 0;
-            color: #fff;
-            font-weight: 600;
-        }
-        .fc-next-button,.fc-prev-button {
-            padding: 8px 15px;
-        }
-        .fc-prev-button {
-            margin-right: 10px;
-        }
-    .fc {
-        .fc-daygrid-day {
-            &.fc-day-today {
-                background-color: rgba(255,255,255,0.2);
-            }
-        } 
+    }
+    .fc-timeGridDay-button,.fc-timeGridWeek-button {
+        margin-left: 10px;
+    }
+    .fc-button-active {
+        background: $btn-active;
+        border: 0;
+        color: #fff;
+        font-weight: 600;
+    }
+    .fc-next-button,.fc-prev-button {
+        padding: 8px 15px;
+    }
+    .fc-prev-button {
+        margin-right: 10px;
     }
     .fc-theme-standard {
         td, th, .fc-scrollgrid {
             border: 1px solid #99B5C0;
         }
     } 
+    .fc-col-header-cell-cushion {
+        color: #1B94D3;
+        font-weight: 600;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .fc-daygrid-day-number {
+        color: #0B5C85;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .manage-top {
+        .search {
+            margin-bottom: 20px;
+        }
+        .btn-box {
+            margin-left: auto;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width:575px) {
+    .manage-top {
+        .search {
+            margin-bottom: 20px;
+            select {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            .input-box {
+                width: 100%;
+            }
+        }
+        .btn-box {
+            margin-left: auto;
+            width: 100%;
+        }
+    }
+    #calendar {
+        button {
+            padding: 10px 15px;
+            font-size: 13px;
+        }
+        .fc-timeGridDay-button,.fc-timeGridWeek-button {
+            margin-left: 5px;
+        }
+        .fc-next-button,.fc-prev-button {
+            padding: 10px;
+        }
+        .fc-toolbar-title {
+            font-size: 22px;
+        }
+        .fc-toolbar {
+            &.fc-header-toolbar {
+                flex-wrap: wrap;
+                .fc-toolbar-chunk {
+                    &:nth-child(1) {
+                        order: 2;
+                    }
+                    &:nth-child(2) {
+                        order: 1;
+                        width: 100%;
+                        h2 {
+                            text-align: center;
+                            margin-bottom: 30px;
+                        }
+                    }
+                    &:nth-child(3) {
+                        order: 3;
+                    }
+                }
+            }
+        } 
+    }
 }
