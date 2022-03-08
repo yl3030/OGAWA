@@ -155,3 +155,63 @@
         } 
     }
 }
+
+#abnormal {
+    .modal-dialog {
+        max-width: 800px;
+        // overflow-x: auto;
+    }
+    .modal-body {
+        overflow-x: auto;
+    }
+}
+
+.abnormal-table {
+    min-width: 575px;
+    width: 100%;
+    text-align: center;
+    overflow-x: auto;
+    tr {
+        width: 100%;
+    }
+    td {
+        white-space: nowrap;
+    }
+    &_title {
+        background-color: #E2F8FF;
+        padding: 10px;
+        width: 100%;
+        color: $blue;
+        td {
+            padding: 10px 0;
+        }
+    }
+    &_content {
+        // width: calc((100% - 45px - 60px)/5) !important;
+        width: 17%;
+    } 
+    &_main {
+        background-color: #F7F7F7;
+        .area {
+            background-color: #DBE7EC;
+            color: $blue;
+        }
+        td {
+            padding: 5px 0;
+        }
+    }
+    table {
+        width: 100%;
+    }
+    .area {
+        // width: 45px;
+        width: 5%;
+        -webkit-writing-mode: vertical-rl;  
+        writing-mode: vertical-rl;
+    }
+    .name {
+        // width: 60px;
+        width: 10%;
+    }
+}
+

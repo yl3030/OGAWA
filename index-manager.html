@@ -35,11 +35,11 @@
                 
             </div>
             <div class="btn-box">
-                <button class="btn-yellow">
+                <button class="btn-yellow" data-bs-toggle="modal" data-bs-target="#technician">
                     <img src="./public/img/icon_face.svg" alt="">
                     <span>技術職人</span>
                 </button>
-                <button class="btn-yellow ms-2">
+                <button class="btn-yellow ms-2" data-bs-toggle="modal" data-bs-target="#abnormal">
                     <img src="./public/img/icon_alert2.svg" alt="">
                     <span>異常統計</span>
                 </button>
@@ -50,6 +50,234 @@
     
 
     <footer>版權所有©2022 小川職人</footer>
+
+
+    <div class="modal fade" id="abnormal" tabindex="-1" aria-labelledby="abnormalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="abnormalLabel">異常統計</h5>
+              <img class="modal-close" data-bs-dismiss="modal" src="./public/img/icon_close.svg" alt="">
+            </div>
+            <div class="modal-body">
+                <div class="abnormal-table">
+                    <table class="mb-2">
+                        <tr class="abnormal-table_title">
+                            <td class="area"></td>
+                            <td class="name"></td>
+                            <td class="abnormal-table_content">評論</td>
+                            <td class="abnormal-table_content">異常</td>
+                            <td class="abnormal-table_content">客訴</td>
+                            <td class="abnormal-table_content">無法拆洗</td>
+                            <td class="abnormal-table_content">現場追加</td>
+                        </tr>
+                    </table>
+                    <table class="mb-2">
+                        <!-- 大台北 -->
+                        <tr class="abnormal-table_main">
+                            <td class="area" rowspan="12">大台北</td>
+                            <td class="name">保哥</td>
+                            <td class="abnormal-table_content color-bad">40%</td>
+                            <td class="abnormal-table_content color-great">1</td>
+                            <td class="abnormal-table_content color-normal">3</td>
+                            <td class="abnormal-table_content color-normal">5</td>
+                            <td class="abnormal-table_content color-bad">12</td>
+                        </tr>
+                        <tr class="abnormal-table_main">
+                            <td class="name">豪哥</td>
+                            <td class="abnormal-table_content color-bad">40%</td>
+                            <td class="abnormal-table_content color-great">1</td>
+                            <td class="abnormal-table_content color-normal">3</td>
+                            <td class="abnormal-table_content color-normal">5</td>
+                            <td class="abnormal-table_content color-bad">12</td>
+                        </tr>
+                        <tr class="abnormal-table_main">
+                            <td class="name">偉哥</td>
+                            <td class="abnormal-table_content color-bad">40%</td>
+                            <td class="abnormal-table_content color-great">1</td>
+                            <td class="abnormal-table_content color-normal">3</td>
+                            <td class="abnormal-table_content color-normal">5</td>
+                            <td class="abnormal-table_content color-bad">12</td>
+                        </tr>
+                        <tr class="abnormal-table_main">
+                            <td class="name">倫哥</td>
+                            <td class="abnormal-table_content color-bad">40%</td>
+                            <td class="abnormal-table_content color-great">1</td>
+                            <td class="abnormal-table_content color-normal">3</td>
+                            <td class="abnormal-table_content color-normal">5</td>
+                            <td class="abnormal-table_content color-bad">12</td>
+                        </tr>
+                        <tr class="abnormal-table_main">
+                            <td class="name">忻哥</td>
+                            <td class="abnormal-table_content color-bad">40%</td>
+                            <td class="abnormal-table_content color-great">1</td>
+                            <td class="abnormal-table_content color-normal">3</td>
+                            <td class="abnormal-table_content color-normal">5</td>
+                            <td class="abnormal-table_content color-bad">12</td>
+                        </tr>
+                        <tr class="abnormal-table_main">
+                            <td class="name">蔡哥</td>
+                            <td class="abnormal-table_content color-bad">40%</td>
+                            <td class="abnormal-table_content color-great">1</td>
+                            <td class="abnormal-table_content color-normal">3</td>
+                            <td class="abnormal-table_content color-normal">5</td>
+                            <td class="abnormal-table_content color-bad">12</td>
+                        </tr>
+                        <tr class="abnormal-table_main">
+                            <td class="name">坤哥</td>
+                            <td class="abnormal-table_content color-bad">40%</td>
+                            <td class="abnormal-table_content color-great">1</td>
+                            <td class="abnormal-table_content color-normal">3</td>
+                            <td class="abnormal-table_content color-normal">5</td>
+                            <td class="abnormal-table_content color-bad">12</td>
+                        </tr>
+                        <tr class="abnormal-table_main">
+                            <td class="name">祥哥</td>
+                            <td class="abnormal-table_content color-bad">40%</td>
+                            <td class="abnormal-table_content color-great">1</td>
+                            <td class="abnormal-table_content color-normal">3</td>
+                            <td class="abnormal-table_content color-normal">5</td>
+                            <td class="abnormal-table_content color-bad">12</td>
+                        </tr>
+                        <tr class="abnormal-table_main">
+                            <td class="name">昌哥</td>
+                            <td class="abnormal-table_content color-bad">40%</td>
+                            <td class="abnormal-table_content color-great">1</td>
+                            <td class="abnormal-table_content color-normal">3</td>
+                            <td class="abnormal-table_content color-normal">5</td>
+                            <td class="abnormal-table_content color-bad">12</td>
+                        </tr>
+                        <tr class="abnormal-table_main">
+                            <td class="name">瀚哥</td>
+                            <td class="abnormal-table_content color-bad">40%</td>
+                            <td class="abnormal-table_content color-great">1</td>
+                            <td class="abnormal-table_content color-normal">3</td>
+                            <td class="abnormal-table_content color-normal">5</td>
+                            <td class="abnormal-table_content color-bad">12</td>
+                        </tr>
+                        <tr class="abnormal-table_main">
+                            <td class="name">祐哥</td>
+                            <td class="abnormal-table_content color-bad">40%</td>
+                            <td class="abnormal-table_content color-great">1</td>
+                            <td class="abnormal-table_content color-normal">3</td>
+                            <td class="abnormal-table_content color-normal">5</td>
+                            <td class="abnormal-table_content color-bad">12</td>
+                        </tr>
+                        <tr class="abnormal-table_main">
+                            <td class="name">鋒哥</td>
+                            <td class="abnormal-table_content color-bad">40%</td>
+                            <td class="abnormal-table_content color-great">1</td>
+                            <td class="abnormal-table_content color-normal">3</td>
+                            <td class="abnormal-table_content color-normal">5</td>
+                            <td class="abnormal-table_content color-bad">12</td>
+                        </tr>
+                    </table>
+
+                    <table class="mb-2">
+                        <!-- 桃竹苗 -->
+                        <tr class="abnormal-table_main">
+                            <td class="area" rowspan="4">桃竹苗</td>
+                            <td class="name">曄哥</td>
+                            <td class="abnormal-table_content color-bad">40%</td>
+                            <td class="abnormal-table_content color-great">1</td>
+                            <td class="abnormal-table_content color-normal">3</td>
+                            <td class="abnormal-table_content color-normal">5</td>
+                            <td class="abnormal-table_content color-bad">12</td>
+                        </tr>
+                        <tr class="abnormal-table_main">
+                            <td class="name">生哥</td>
+                            <td class="abnormal-table_content color-bad">40%</td>
+                            <td class="abnormal-table_content color-great">1</td>
+                            <td class="abnormal-table_content color-normal">3</td>
+                            <td class="abnormal-table_content color-normal">5</td>
+                            <td class="abnormal-table_content color-bad">12</td>
+                        </tr>
+                        <tr class="abnormal-table_main">
+                            <td class="name">駿哥</td>
+                            <td class="abnormal-table_content color-bad">40%</td>
+                            <td class="abnormal-table_content color-great">1</td>
+                            <td class="abnormal-table_content color-normal">3</td>
+                            <td class="abnormal-table_content color-normal">5</td>
+                            <td class="abnormal-table_content color-bad">12</td>
+                        </tr>
+                        <tr class="abnormal-table_main">
+                            <td class="name">宏哥</td>
+                            <td class="abnormal-table_content color-bad">40%</td>
+                            <td class="abnormal-table_content color-great">1</td>
+                            <td class="abnormal-table_content color-normal">3</td>
+                            <td class="abnormal-table_content color-normal">5</td>
+                            <td class="abnormal-table_content color-bad">12</td>
+                        </tr>
+                    </table>
+                        
+                    <table class="mb-2">
+                        <!-- 大台中 -->
+                        <tr class="abnormal-table_main">
+                            <td class="area py-4">大台中</td>
+                            <td class="name">達哥</td>
+                            <td class="abnormal-table_content color-bad">40%</td>
+                            <td class="abnormal-table_content color-great">1</td>
+                            <td class="abnormal-table_content color-normal">3</td>
+                            <td class="abnormal-table_content color-normal">5</td>
+                            <td class="abnormal-table_content color-bad">12</td>
+                        </tr>
+                    </table>
+
+                    <table class="mb-2">
+                        <!-- 大高雄 -->
+                        <tr class="abnormal-table_main">
+                            <td class="area" rowspan="4">大高雄</td>
+                            <td class="name">融哥</td>
+                            <td class="abnormal-table_content color-bad">40%</td>
+                            <td class="abnormal-table_content color-great">1</td>
+                            <td class="abnormal-table_content color-normal">3</td>
+                            <td class="abnormal-table_content color-normal">5</td>
+                            <td class="abnormal-table_content color-bad">12</td>
+                        </tr>
+                        <tr class="abnormal-table_main">
+                            <td class="name">源哥</td>
+                            <td class="abnormal-table_content color-bad">40%</td>
+                            <td class="abnormal-table_content color-great">1</td>
+                            <td class="abnormal-table_content color-normal">3</td>
+                            <td class="abnormal-table_content color-normal">5</td>
+                            <td class="abnormal-table_content color-bad">12</td>
+                        </tr>
+                        <tr class="abnormal-table_main">
+                            <td class="name">曹哥</td>
+                            <td class="abnormal-table_content color-bad">40%</td>
+                            <td class="abnormal-table_content color-great">1</td>
+                            <td class="abnormal-table_content color-normal">3</td>
+                            <td class="abnormal-table_content color-normal">5</td>
+                            <td class="abnormal-table_content color-bad">12</td>
+                        </tr>
+                    </table>
+                        
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="technician" tabindex="-1" aria-labelledby="technicianLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content pb-0">
+            <div class="modal-header">
+              <h5 class="modal-title" id="technicianLabel">技術職人</h5>
+              <img class="modal-close" data-bs-dismiss="modal" src="./public/img/icon_close.svg" alt="">
+            </div>
+            <div class="modal-body py-4">
+                <div>
+                    <p>大台北</p>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-round btn-bg-white mx-2" data-bs-dismiss="modal">確定</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
 
     <script src="./public/js/jquery/jquery.min.js"></script>
     <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
