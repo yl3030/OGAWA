@@ -215,3 +215,29 @@
     }
 }
 
+#technician {
+    .modal-dialog {
+        max-width: 600px;
+    }
+    .select {
+        &_class {
+            padding: 15px 20px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            &:first-child {
+                background-color: #F4FBFE;
+            }
+            &:nth-child(2) {
+                background-color: #FAFAFA;
+            }
+        }
+        &_item {
+            border-color: #ABBCC3;
+            color: #87969B;
+            margin-bottom: 0;
+            &.active {
+                border: 0;
+            }
+        }
+    }
+}

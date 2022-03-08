@@ -13,11 +13,15 @@ $(".fixed-btn_link").click(function(){
 $(document).on("click",".select_item",function(){
     if($(this).parents(".select").hasClass("multiple")){
         $(this).toggleClass("active");
+    }else if($(this).parents(".select").hasClass("select-technician")){
+        $(this).parents(".select").find(".select_item").removeClass("active");
+        $(this).addClass("active");
     }else {
         if(!$(this).hasClass("customize")){
             $(this).toggleClass("active").siblings(".select_item").removeClass("active");
         }
     }
+    
 })
 $(".check").click(function(){
     $(this).parents(".select_item").toggleClass("active");

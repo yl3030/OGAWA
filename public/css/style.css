@@ -1802,4 +1802,32 @@ footer {
 .abnormal-table .name {
   width: 10%;
 }
+
+#technician .modal-dialog {
+  max-width: 600px;
+}
+
+#technician .select_class {
+  padding: 15px 20px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+#technician .select_class:first-child {
+  background-color: #F4FBFE;
+}
+
+#technician .select_class:nth-child(2) {
+  background-color: #FAFAFA;
+}
+
+#technician .select_item {
+  border-color: #ABBCC3;
+  color: #87969B;
+  margin-bottom: 0;
+}
+
+#technician .select_item.active {
+  border: 0;
+}
 /*# sourceMappingURL=style.css.map */
