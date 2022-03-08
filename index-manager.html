@@ -14,38 +14,41 @@
 </head>
 <body>
     <div class="manager-home">
-        <header class="header-page mb-4">
-            <img class="logo-page" src="./public/img/logo.png" alt="">
+        <header class="header-page">
+            <a href="./index-manager.html"><img class="logo-page" src="./public/img/logo.png" alt=""></a>
         </header>
-        <div class="mb-5 manage-top d-flex align-items-center justify-content-between flex-wrap">
-            <div class="search d-flex align-items-center justify-content-between flex-wrap">
-                <select name="" id="">
-                    <option value="">全部</option>
-                    <option value="">技師</option>
-                    <option value="">日期</option>
-                    <option value="">關鍵字</option>
-                    <option value="">line ID</option>
-                    <option value="">手機</option>
-                    <option value="">地址</option>
-                </select>
-                <div class="input-box d-flex align-items-center justify-content-between">
-                    <input type="text">
-                    <button><img src="./public/img/icon_search.svg" alt=""></button>
+        <main>
+            <div class="mb-5 manage-top d-flex align-items-center justify-content-between flex-wrap">
+                <div class="search d-flex align-items-center justify-content-between flex-wrap">
+                    <select class="select-box-blueborder" name="" id="">
+                        <option value="">全部</option>
+                        <option value="">技師</option>
+                        <option value="">日期</option>
+                        <option value="">關鍵字</option>
+                        <option value="">line ID</option>
+                        <option value="">手機</option>
+                        <option value="">地址</option>
+                    </select>
+                    <div class="input-box d-flex align-items-center justify-content-between">
+                        <input type="text">
+                        <button><img src="./public/img/icon_search.svg" alt=""></button>
+                    </div>
+                    
                 </div>
-                
+                <div class="btn-box">
+                    <button class="btn-yellow" data-bs-toggle="modal" data-bs-target="#technician">
+                        <img src="./public/img/icon_face.svg" alt="">
+                        <span>技術職人</span>
+                    </button>
+                    <button class="btn-yellow ms-2" data-bs-toggle="modal" data-bs-target="#abnormal">
+                        <img src="./public/img/icon_alert2.svg" alt="">
+                        <span>異常統計</span>
+                    </button>
+                </div>
             </div>
-            <div class="btn-box">
-                <button class="btn-yellow" data-bs-toggle="modal" data-bs-target="#technician">
-                    <img src="./public/img/icon_face.svg" alt="">
-                    <span>技術職人</span>
-                </button>
-                <button class="btn-yellow ms-2" data-bs-toggle="modal" data-bs-target="#abnormal">
-                    <img src="./public/img/icon_alert2.svg" alt="">
-                    <span>異常統計</span>
-                </button>
-            </div>
-        </div>
-        <div id="calendar"></div>
+            <div id="calendar"></div>
+        </main>
+        
     </div>
     
 
@@ -355,7 +358,7 @@
                 
             </div>
             <div class="modal-footer">
-                <a href="" class="btn btn-round btn-bg-light mx-2" data-bs-dismiss="modal">確定</a>
+                <a href="./manager-case.html" class="btn btn-round btn-bg-light mx-2" data-bs-dismiss="modal">確定</a>
             </div>
           </div>
         </div>

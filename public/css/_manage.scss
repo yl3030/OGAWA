@@ -8,20 +8,13 @@
 .search {
     max-width: 640px;
     width: 100%;
-    select,.input-box {
+    .input-box {
         border: 1px solid #7CDEFF;
         background-color: #fff;
         box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.15);
     }
     select {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
         width: 200px;
-        background-image: url(../img/icon_arrow-lightblue-down.svg);
-        background-position: calc(100% - 20px) center;
-        background-size: 13px;
-        background-repeat: no-repeat;
     }
     .input-box {
         width: calc(100% - 200px - 15px);
@@ -88,6 +81,61 @@
         color: #0B5C85;
     }
 }
+
+.search-month {
+    width: 200px;
+}
+
+.technic-money {
+    background: linear-gradient(86.11deg, rgba(230, 246, 255, 0) 0%, #E6F6FF 99.71%);
+    box-shadow: inset 0px 1px 12px #BCD2DA;
+    border-radius: 20px;
+    position: relative;
+    padding: 15px;
+    .money-title {
+        position: absolute;
+        color: #709EB6;
+        font-size: 15px;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+    }
+    p {
+        color: $title;
+        font-size: 36px;
+        font-weight: 500;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+.manage-case {
+    &_arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        transition: $transition-common;
+        cursor: pointer;
+        img {
+            width: 8px;
+        }
+        &.active {
+            transform: rotate(90deg);
+        }
+    }
+    &_link {
+        width: 65px;
+    }
+    &_title {
+        width: calc(100% - 65px) !important;
+    }
+    &_hide {
+        display: none;
+    }
+}
+
 
 @media screen and (max-width:1000px) {
     .manage-top {

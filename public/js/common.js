@@ -129,3 +129,24 @@ $(".add-machine").click(function(){
     $(".machine").append(machine_data);
 })
 
+
+// 管理端 展開案件詳情
+$(".manage-case_arrow").click(function(){
+    $(this).parents(".box-common_content").children(".manage-case_hide").slideToggle(300);
+    $(this).toggleClass("active");
+})
+
+// 補給申請
+$(".icon_count").click(function(){
+    let input = $(this).parents(".apply-box").children("input").val();
+    if($(this).hasClass("minus")){
+        if(input>0){
+            input--;
+        }else {
+            input = 0;
+        }
+    }else if($(this).hasClass("add")){
+        input++;
+    }
+    $(this).parents(".apply-box").children("input").val(input);
+})
