@@ -45,6 +45,18 @@
                         </div>
                         <p class="list_content">吳宗憲</p>
                     </div>
+                    <div class="list-common d-flex flex-wrap align-items-center mb-2">
+                        <div class="list_title d-flex align-items-center">
+                            <h4>客戶電話</h4>
+                        </div>
+                        <p class="list_content">0937-928-897</p>
+                    </div>
+                    <div class="list-common d-flex flex-wrap align-items-center mb-2">
+                        <div class="list_title d-flex align-items-center">
+                            <h4>客戶識別碼</h4>
+                        </div>
+                        <p class="list_content">683V694J4X1J43124EKN</p>
+                    </div>
                     <hr class="hr-common">
                     <div class="list-common d-flex flex-wrap align-items-center mb-2">
                         <div class="list_title d-flex align-items-center">
@@ -111,7 +123,7 @@
                     </div>
                 </div>
             </div>
-            <div class="box-common mb-30" id="contact-customer">
+            <!-- <div class="box-common mb-30" id="contact-customer">
                 <h2 class="box_title">聯絡顧客</h2>
                 <div class="box-common_content">
                     <div class="list-common d-flex flex-wrap align-items-center mb-2">
@@ -143,7 +155,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- 已回報 -->
             <div class="box-common mb-30" id="return-result">
                 <h2 class="box_title">回報結果</h2>
@@ -224,7 +236,7 @@
                     </div>
                     <div class="machine">
                         <div class="machine_data abnormal">
-                            <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center justify-content-between machine_show">
                                 <div class="d-flex align-items-center">
                                     <h5 class="machine_data_name">分離式冷氣</h5>
                                     <div class="tag tag-abnormal">異常</div>
@@ -347,7 +359,7 @@
                             </div>
                         </div>
                         <div class="machine_data custom">
-                            <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center justify-content-between machine_show">
                                 <div class="d-flex align-items-center">
                                     <h5 class="machine_data_name">分離式冷氣</h5>
                                     <div class="tag tag-custom">客訴</div>
@@ -470,7 +482,7 @@
                             </div>
                         </div>
                         <div class="machine_data">
-                            <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center justify-content-between machine_show">
                                 <div class="d-flex align-items-center">
                                     <h5 class="machine_data_name">分離式冷氣</h5>
                                 </div>
@@ -590,13 +602,13 @@
             </svg>
             <p>基本資料</p>
         </div>
-        <div class="fixed-btn_link fixed-btn_link-contact" data-target="#contact-customer">
+        <!-- <div class="fixed-btn_link fixed-btn_link-contact" data-target="#contact-customer">
             <svg class="fixed-btn_icon" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14.9992 16.7801C13.4387 16.7801 11.9133 16.3173 10.6158 15.4504C9.31825 14.5834 8.30697 13.3511 7.70979 11.9094C7.11261 10.4677 6.95636 8.88129 7.2608 7.35077C7.56524 5.82025 8.31669 4.41438 9.42013 3.31094C10.5236 2.2075 11.9294 1.45605 13.46 1.15161C14.9905 0.84717 16.5769 1.00342 18.0186 1.6006C19.4603 2.19778 20.6926 3.20906 21.5596 4.50657C22.4265 5.80408 22.8893 7.32954 22.8893 8.89004C22.887 10.9819 22.055 12.9874 20.5758 14.4666C19.0966 15.9458 17.0911 16.7778 14.9992 16.7801V16.7801ZM14.9992 2.73045C13.7806 2.73045 12.5894 3.09183 11.5762 3.76887C10.563 4.44592 9.77332 5.40823 9.30704 6.53409C8.84077 7.65996 8.71885 8.89881 8.95669 10.094C9.19453 11.2891 9.78146 12.3869 10.6432 13.2485C11.505 14.1101 12.6029 14.6967 13.7982 14.9343C14.9934 15.1719 16.2322 15.0497 17.358 14.5831C18.4837 14.1166 19.4458 13.3267 20.1226 12.3133C20.7994 11.3 21.1605 10.1086 21.1603 8.89004C21.1583 7.25675 20.5086 5.69093 19.3535 4.53615C18.1985 3.38138 16.6325 2.73198 14.9992 2.73045V2.73045Z" fill="#B87A0C"/>
                 <path d="M26.6355 29.1468C26.4062 29.1468 26.1863 29.0557 26.0242 28.8936C25.8621 28.7315 25.771 28.5116 25.771 28.2823V27.2953C25.7691 25.7729 25.1633 24.3133 24.0867 23.2369C23.01 22.1605 21.5503 21.5551 20.0278 21.5536H9.97075C8.44841 21.5551 6.98887 22.1605 5.91241 23.237C4.83595 24.3134 4.23053 25.773 4.22901 27.2953V28.2823C4.22901 28.5116 4.13793 28.7315 3.9758 28.8936C3.81367 29.0557 3.59378 29.1468 3.3645 29.1468C3.13522 29.1468 2.91533 29.0557 2.75321 28.8936C2.59108 28.7315 2.5 28.5116 2.5 28.2823V27.2953C2.50229 25.3147 3.29012 23.4158 4.69066 22.0152C6.0912 20.6147 7.99009 19.8269 9.97075 19.8246H20.0278C22.0086 19.8269 23.9076 20.6147 25.3084 22.0152C26.7092 23.4157 27.4973 25.3145 27.5 27.2953V28.2823C27.5 28.5116 27.4089 28.7315 27.2468 28.8936C27.0847 29.0557 26.8648 29.1468 26.6355 29.1468V29.1468Z" fill="#B87A0C"/>
             </svg>    
             <p>聯絡顧客</p>
-        </div>
+        </div> -->
         <div class="fixed-btn_link fixed-btn_link-return" data-target="#return-result">
             <svg class="fixed-btn_icon" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19.6296 3.5H6.75181C5.62416 3.5 4.54269 3.94796 3.74533 4.74532C2.94796 5.54269 2.5 6.62416 2.5 7.7518L2.5 22.3194C2.50511 23.446 2.95491 24.525 3.75154 25.3216C4.54817 26.1183 5.62716 26.5681 6.75375 26.5732H23.2462C24.3739 26.5716 25.455 26.123 26.2524 25.3256C27.0498 24.5282 27.4985 23.4471 27.5 22.3194V11.3704C27.5 11.2319 27.4728 11.0947 27.4198 10.9668C27.3668 10.8388 27.2891 10.7225 27.1912 10.6245L20.3696 3.80883C20.1732 3.61247 19.9073 3.5015 19.6296 3.5V3.5ZM20.5872 6.53395L24.4622 10.4187H23.0617C22.4046 10.4171 21.7749 10.1548 21.3109 9.68942C20.847 9.22401 20.5867 8.59349 20.5872 7.93633V6.53395ZM25.7208 22.3117C25.7208 22.968 25.4601 23.5974 24.996 24.0614C24.532 24.5255 23.9025 24.7862 23.2462 24.7862H6.75181C6.09601 24.7852 5.46739 24.5241 5.00385 24.0602C4.54032 23.5963 4.27971 22.9675 4.27919 22.3117V7.74404C4.28125 7.08961 4.54266 6.46268 5.00615 6.00066C5.46963 5.53863 6.09737 5.27919 6.75181 5.27919H18.8157V7.93827C18.8157 9.06592 19.2637 10.1474 20.0611 10.9448C20.8584 11.7421 21.9399 12.1901 23.0676 12.1901H25.7266L25.7208 22.3117Z" fill="#B87A0C"/>
@@ -650,18 +662,16 @@
 
     <script>
         let data_top = $("#data").offset().top;
-        let contact_top = $("#contact-customer").offset().top - 30;
+        // let contact_top = $("#contact-customer").offset().top - 30;
         let return_top = $("#return-result").offset().top - 30;
         $(window).on("resize",function(){
             let data_top = $("#data").offset().top;
-            let contact_top = $("#contact-customer").offset().top - 30;
+            // let contact_top = $("#contact-customer").offset().top - 30;
             let return_top = $("#return-result").offset().top - 30;
         })
         $(window).on("scroll",function(){
-            if($(window).scrollTop() >= data_top && $(window).scrollTop() < contact_top){
+            if($(window).scrollTop() >= data_top && $(window).scrollTop() < return_top){
                 $(".fixed-btn_link-data").addClass("active").siblings(".fixed-btn_link").removeClass("active");
-            }else if($(window).scrollTop() >= contact_top && $(window).scrollTop() < return_top){
-                $(".fixed-btn_link-contact").addClass("active").siblings(".fixed-btn_link").removeClass("active");
             }else if($(window).scrollTop() >= return_top){
                 $(".fixed-btn_link-return").addClass("active").siblings(".fixed-btn_link").removeClass("active");
             }

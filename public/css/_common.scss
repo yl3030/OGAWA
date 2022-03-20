@@ -145,8 +145,8 @@ main {
 .btn {
     &-return {
         color: #fff;
-        font-size: 14px;
-        padding: 5px 13px;
+        font-size: 15px;
+        padding: 5px 16px;
         transition: $transition-common;
         border: 1px solid $btn-color;
         background-color: $btn-color;
@@ -362,23 +362,58 @@ main {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255,255,255,0.9);
     padding: 85px 20px 40px;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
     display: none;
     z-index: 70;
     ul {
+        display: flex;
+        flex-wrap: wrap;
         li {
-            width: 100%;
+            width: 50%;
             margin-bottom: 15px;
             a {
                 text-align: center;
                 width: 100%;
                 display: block;
+                border: 1px solid #99BBCD;
+                border-radius: 20px;
+                padding: 30px 0;
+                svg {
+                    width: 70px;
+                    display: block;
+                    margin: 0 auto 10px;
+                }
+                span {
+                    color: #3B839B;
+                    width: 100%;
+                    display: block;
+                }
             }
             &:last-child {
                 margin-bottom: 0;
+            }
+            &:nth-child(odd){ 
+                padding-right: 10px;
+            }
+            &:nth-child(even) {
+                padding-left: 10px;
+            }
+            &.active {
+                a {
+                    border-color: transparent;
+                    background: $btn-active;
+                    svg {
+                        path {
+                            fill: #fff;
+                        }
+                    }
+                    span {
+                        color: #fff;
+                    }
+                }
             }
         }
     }
@@ -503,20 +538,24 @@ main {
 .case {
     &_content {
         h3 {
-            width: calc(100% - 100px);
+            width: calc(100% - 125px);
         }
 
     }
     &_btn {
-        width: 100px;
+        width: 125px;
         .icon_inform {
-            width: 25px;
+            // width: 25px;
+            width: 30px;
             transition: $transition-common;
             &:hover {
                 path {
                     fill:$title;
                 }
             }
+        }
+        a {
+            margin-left: 13px;
         }
     }
     &_table {
@@ -582,7 +621,7 @@ main {
         .case {
             &_content {
                 h3 {
-                    width: calc(100% - 60px - 100px);
+                    width: calc(100% - 60px - 125px);
                     padding: 0 10px;
                 }
             }
@@ -658,8 +697,8 @@ main {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 26px;
-                height: 26px;
+                width: 32px;
+                height: 32px;
                 border-radius: 50%;
                 border: 1px solid $btn-color;
                 margin-left: 9px;
@@ -1085,6 +1124,9 @@ footer {
         cursor: pointer;
         width: 22px;
     }
+    &_show {
+        cursor: pointer;
+    }
     &_hide {
         margin-top: 20px;
         display: none;
@@ -1129,21 +1171,21 @@ footer {
                 overflow: hidden;
                 background-color: #DCDEEB;
                 margin-bottom: 10px;
-                .plus {
-                    width: 20px;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%,-50%);
-                }
-                input {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    top: 0;
-                    left: 0;
-                    opacity: 0;
-                }
+                // .plus {
+                //     width: 20px;
+                //     position: absolute;
+                //     top: 50%;
+                //     left: 50%;
+                //     transform: translate(-50%,-50%);
+                // }
+                // input {
+                //     position: absolute;
+                //     width: 100%;
+                //     height: 100%;
+                //     top: 0;
+                //     left: 0;
+                //     opacity: 0;
+                // }
             }
             .select {
                 width: calc(100% - 80px);
@@ -1155,7 +1197,7 @@ footer {
             width: 15px;
             top: 5px;
             left: 5px;
-            display: none;
+            // display: none;
         }
         &-main {
             position: absolute;
@@ -1164,7 +1206,27 @@ footer {
             object-fit: cover;
             top: 0;
             left: 0;
-            display: none;
+            // display: none;
+        }
+    }
+    &-add-pic {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 40px;
+        position: relative;
+        border-radius: 15px;
+        cursor: pointer;
+        input {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            cursor: pointer;
         }
     }
     input,select,textarea {
@@ -1352,4 +1414,19 @@ footer {
             }
         } 
     } 
+    .nav-main {
+        ul {
+            li {
+                a {
+                    svg {
+                        width: 60px;
+                        margin-bottom: 5px;
+                    }
+                    span {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
 }

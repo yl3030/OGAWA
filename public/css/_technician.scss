@@ -233,3 +233,31 @@
         }
     }
 }
+
+.contact-select {
+    // border: 0;
+    padding: 10px 15px;
+    border-radius: 15px;
+    // background-color: $purple;
+    cursor: pointer;
+    margin-bottom: 15px;
+    border: 1px solid $select;
+    label {
+        margin-left: 8px;
+    }
+    .contact_date {
+        font-size: 15px;
+        color: $gray;
+    }
+    &.active {
+        // background: $purple;
+        box-shadow: none;
+        .check {
+            background: $btn-active;
+            border: 0;
+            img {
+                opacity: 1;
+            }
+        }
+    }
+}

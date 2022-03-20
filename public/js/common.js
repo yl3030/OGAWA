@@ -28,32 +28,48 @@ $(".check").click(function(){
     $(this).parents(".select_item").siblings(".select_item").removeClass("active");
 })
 
-// 新增
-$(".btn-add-record").click(function(){
-    let record;
-    let today = new Date();
-    let year = today.getFullYear();
-    let month = today.getMonth() + 1;
-    let date = today.getDate();
-    let now = year + "/" + month + "/" + date;
-    $(this).parents(".modal-content").find(".select_item").each(function(){
-        if($(this).hasClass("active")) {
-            if($(this).hasClass("customize")){
-                record = $(this).children("input").val();
-            }else {
-                record = $(this).children("span").text();
-            }
-        }
-    })
-    let contactRecord = $("<div></div>").addClass("d-flex align-items-center mb-2");
-    let contactRecord_state = $("<div></div>").addClass("contact-record_state").text(record);
-    let day = $("<span></span>").addClass("color-gray").text(now);
-    contactRecord.append(contactRecord_state,day);
-    $(".contact-record_content").append(contactRecord);
+$(".contact-select").click(function(){
+    if($(this).hasClass("active")){
+        $(this).removeClass("active");
+        $(this).find(".contact_date").hide();
+    }else {
+        $(this).addClass("active");
+        let today = new Date();
+        let year = today.getFullYear();
+        let month = today.getMonth() + 1;
+        let date = today.getDate();
+        let now = year + "/" + month + "/" + date;
+        $(this).find(".contact_date").text(now).show();
+    }
+    
 })
 
-$(".machine-arrow").click(function(){
-    $(this).toggleClass("active");
+// 新增
+// $(".btn-add-record").click(function(){
+//     let record;
+//     let today = new Date();
+//     let year = today.getFullYear();
+//     let month = today.getMonth() + 1;
+//     let date = today.getDate();
+//     let now = year + "/" + month + "/" + date;
+//     $(this).parents(".modal-content").find(".select_item").each(function(){
+//         if($(this).hasClass("active")) {
+//             if($(this).hasClass("customize")){
+//                 record = $(this).children("input").val();
+//             }else {
+//                 record = $(this).children("span").text();
+//             }
+//         }
+//     })
+//     let contactRecord = $("<div></div>").addClass("d-flex align-items-center mb-2");
+//     let contactRecord_state = $("<div></div>").addClass("contact-record_state").text(record);
+//     let day = $("<span></span>").addClass("color-gray").text(now);
+//     contactRecord.append(contactRecord_state,day);
+//     $(".contact-record_content").append(contactRecord);
+// })
+
+$(".machine_show").click(function(){
+    $(this).find(".machine-arrow").toggleClass("active");
     $(this).parents(".machine_data").children(".machine_hide").slideToggle(300);
 })
 
@@ -107,7 +123,7 @@ $(document).on("click",".machien_select_item",function(){
 
 // 新增機器
 let machine_data = $("<div class='machine_data'></div>");
-let machine_title = $("<div class='d-flex align-items-center justify-content-between'><div class='d-flex align-items-center'><h5 class='machine_data_name'>新機器</h5></div><div class='d-flex align-items-center'><div class='machine-arrow'><img src='./public/img/icon_arrow-deep-right.svg'></div><img class='machine-delete ms-3' data-bs-toggle='modal' data-bs-target='#confirm-delete' src='./public/img/icon_trash-can.svg'></div></div>");
+let machine_title = $("<div class='d-flex align-items-center justify-content-between machine_show'><div class='d-flex align-items-center'><h5 class='machine_data_name'>新機器</h5></div><div class='d-flex align-items-center'><div class='machine-arrow'><img src='./public/img/icon_arrow-deep-right.svg'></div><img class='machine-delete ms-3' data-bs-toggle='modal' data-bs-target='#confirm-delete' src='./public/img/icon_trash-can.svg'></div></div>");
 
 let machine_hide = $("<div class='machine_hide'></div>");
 let machine_class = $("<div class='list-common d-flex flex-wrap mb-3'><h4 class='list_title-second'>小分類</h4><div class='list-common_second list-social'><div class='select d-flex flex-wrap select-small select-deep'><div class='select_item d-flex align-items-center justify-content-between'><span>主臥</span></div><div class='select_item d-flex align-items-center justify-content-between'><span>次臥</span></div><div class='select_item d-flex align-items-center justify-content-between'><span>客廳</span></div><div class='select_item d-flex align-items-center justify-content-between'><span>小孩房</span></div><div class='select_item d-flex align-items-center justify-content-between'><span>書房/客房</span></div><div class='select_item px-0 select-machine customize d-flex align-items-center justify-content-between'><div class='check'><img class='check_icon' src='./public/img/icon_check.svg'></div><label>其他</label><input type='text'></div></div></div></div>");
@@ -131,9 +147,9 @@ $(".add-machine").click(function(){
 
 
 // 管理端 展開案件詳情
-$(".manage-case_arrow").click(function(){
-    $(this).parents(".box-common_content").children(".manage-case_hide").slideToggle(300);
-    $(this).toggleClass("active");
+$(".case_content").click(function(){
+    $(this).parents(".box-common_content").find(".manage-case_hide").slideToggle(300);
+    $(this).find(".manage-case_arrow").toggleClass("active");
 })
 
 // 補給申請
@@ -149,4 +165,17 @@ $(".icon_count").click(function(){
         input++;
     }
     $(this).parents(".apply-box").children("input").val(input);
+})
+
+// 搜尋種類
+$(".search-class").change(function(){
+    console.log("###");
+    if($(this).val()=="月份區間"){
+        console.log("$$$");
+        $(this).parents(".search").find(".search-input").css("display","none");
+        $(this).parents(".search").find(".month-duration").css("display","flex");
+    }else {
+        $(this).parents(".search").find(".search-input").css("display","flex");
+        $(this).parents(".search").find(".month-duration").css("display","none");
+    }
 })

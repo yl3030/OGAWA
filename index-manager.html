@@ -20,20 +20,51 @@
         <main>
             <div class="mb-5 manage-top d-flex align-items-center justify-content-between flex-wrap">
                 <div class="search d-flex align-items-center justify-content-between flex-wrap">
-                    <select class="select-box-blueborder" name="" id="">
-                        <option value="">全部</option>
-                        <option value="">技師</option>
-                        <option value="">日期</option>
-                        <option value="">關鍵字</option>
-                        <option value="">line ID</option>
-                        <option value="">手機</option>
-                        <option value="">地址</option>
+                    <select class="select-box-blueborder search-class" name="" id="">
+                        <option value="全部">全部</option>
+                        <option value="技師">技師</option>
+                        <option value="日期">日期</option>
+                        <option value="月份區間">月份區間</option>
+                        <option value="關鍵字">關鍵字</option>
+                        <option value="line ID">line ID</option>
+                        <option value="手機">手機</option>
+                        <option value="地址">地址</option>
                     </select>
-                    <div class="input-box d-flex align-items-center justify-content-between">
+                    <div class="input-box align-items-center justify-content-between search-input">
                         <input type="text">
                         <button><img src="./public/img/icon_search.svg" alt=""></button>
                     </div>
-                    
+                    <div class="input-box align-items-center month-duration">
+                        <select class="select-box-blueborder" name="" id="">
+                            <option value="">2022年3月</option>
+                            <option value="">2022年4月</option>
+                            <option value="">2022年5月</option>
+                            <option value="">2022年6月</option>
+                            <option value="">2022年7月</option>
+                            <option value="">2022年8月</option>
+                            <option value="">2022年9月</option>
+                            <option value="">2022年10月</option>
+                            <option value="">2022年11月</option>
+                            <option value="">2022年12月</option>
+                            <option value="">2023年1月</option>
+                            <option value="">2023年2月</option>
+                        </select>
+                        <span>~</span>
+                        <select class="select-box-blueborder" name="" id="">
+                            <option value="">2022年3月</option>
+                            <option value="">2022年4月</option>
+                            <option value="">2022年5月</option>
+                            <option value="">2022年6月</option>
+                            <option value="">2022年7月</option>
+                            <option value="">2022年8月</option>
+                            <option value="">2022年9月</option>
+                            <option value="">2022年10月</option>
+                            <option value="">2022年11月</option>
+                            <option value="">2022年12月</option>
+                            <option value="">2023年1月</option>
+                            <option value="">2023年2月</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="btn-box">
                     <button class="btn-yellow" data-bs-toggle="modal" data-bs-target="#technician">
@@ -63,6 +94,7 @@
               <img class="modal-close" data-bs-dismiss="modal" src="./public/img/icon_close.svg" alt="">
             </div>
             <div class="modal-body">
+                <h4 class="text-center mb-4 color-blue">2022年3月</h4>
                 <div class="abnormal-table">
                     <table class="mb-2">
                         <tr class="abnormal-table_title">
