@@ -2149,10 +2149,7 @@ footer {
 
 .abnormal-table .area {
   width: 5%;
-  -webkit-writing-mode: vertical-rl;
-  -moz-writing-mode: vertical-rl;
-  -ms-writing-mode: tb-rl;
-      writing-mode: vertical-rl;
+  line-height: 1.2;
 }
 
 .abnormal-table .name {

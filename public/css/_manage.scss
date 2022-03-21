@@ -242,9 +242,10 @@
     .area {
         // width: 45px;
         width: 5%;
-        -webkit-writing-mode: vertical-rl;  
-        -moz-writing-mode: vertical-rl;  
-        writing-mode: vertical-rl;
+        // -webkit-writing-mode: vertical-rl;  
+        // -moz-writing-mode: vertical-rl;  
+        // writing-mode: vertical-rl;
+        line-height: 1.2;
     }
     .name {
         // width: 60px;
