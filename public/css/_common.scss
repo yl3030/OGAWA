@@ -1274,7 +1274,8 @@ footer {
 
 .fixed-btn {
     position: fixed;
-    bottom: 200px;
+    // bottom: 200px;
+    top: 70px;
     background-color: $yellow-bg;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     padding: 15px 8px;

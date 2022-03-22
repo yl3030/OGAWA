@@ -38,7 +38,9 @@ $(".contact-select").click(function(){
         let year = today.getFullYear();
         let month = today.getMonth() + 1;
         let date = today.getDate();
-        let now = year + "/" + month + "/" + date;
+        let hour = today.getHours();
+        let minute = today.getMinutes();
+        let now = year + "/" + month + "/" + date + "  " + hour + ":" + minute;
         $(this).find(".contact_date").text(now).show();
     }
     

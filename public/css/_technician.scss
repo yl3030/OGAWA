@@ -165,7 +165,7 @@
         height: 45px;
         
         .icon_count {
-            width: 40px;
+            width: 45px;
             height: 100%;
             display: flex;
             align-items: center;
@@ -176,7 +176,7 @@
             }
         }
         input {
-            width: calc(100% - 80px);
+            width: calc(100% - 90px);
             border: 0;
             text-align: center;
         }
@@ -259,5 +259,16 @@
                 opacity: 1;
             }
         }
+    }
+}
+
+.announce-check {
+    &:hover {
+        color: #fff;
+    }
+    &.checked {
+        background-color: rgb(219, 219, 219);
+        color: $dark;
+        box-shadow: none;
     }
 }

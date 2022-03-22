@@ -181,7 +181,10 @@
             }
         }
         .list-common {
-            width: calc(100% - 150px);
+            // width: calc(100% - 150px);
+            &.remark {
+                width: calc(100% - 150px);
+            }
         }
         &:last-child {
             margin-bottom: 0;
@@ -259,7 +262,7 @@
     }
     .select {
         &_class {
-            padding: 15px 20px;
+            padding: 15px 20px 0;
             border-radius: 20px;
             margin-bottom: 15px;
             &:first-child {
@@ -272,7 +275,7 @@
         &_item {
             border-color: #ABBCC3;
             color: #87969B;
-            margin-bottom: 0;
+            // margin-bottom: 0;
             &.active {
                 border: 0;
             }
