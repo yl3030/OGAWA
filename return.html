@@ -127,9 +127,13 @@
                             <h4>金額</h4>
                         </div>
                         <div class="list-common_second list-price">
-                            <div class="input-box">
+                            <div class="input-box self">
                                 <label for="">個人執案</label>
                                 <input type="text" placeholder="請輸入金額">
+                                <div class="d-flex align-items-center select_item">
+                                    <div class="check"><img class="check_icon" src="./public/img/icon_check.svg" alt=""></div>
+                                    <span class="ms-2">轉帳</span>
+                                </div>
                             </div>
                             <div class="input-box">
                                 <label for="">車馬費</label>
@@ -139,10 +143,10 @@
                                 <label for="">更換零件</label>
                                 <input type="text" placeholder="請輸入金額">
                             </div>
-                            <div class="input-box">
+                            <!-- <div class="input-box">
                                 <label for="">其他</label>
                                 <input type="text" placeholder="請輸入金額">
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="list-common d-flex flex-wrap align-items-center mb-3">
@@ -317,6 +321,10 @@
                                         <div class="select_item d-flex align-items-center justify-content-between">
                                             <span>無法拆洗</span>
                                         </div>
+                                        <div class="select_item d-flex align-items-center justify-content-between"><span>太乾淨</span></div>
+                                        <div class="select_item d-flex align-items-center justify-content-between">
+                                            <span>異常不洗</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -328,57 +336,17 @@
                                 </div>
                             </div>
                             <div class="list-common d-flex flex-wrap mb-3">
-                                <h4 class="list_title-second">服務前問題</h4>
+                                <h4 class="list_title-second">狀況回報</h4>
                                 <textarea class="list-common_second" name="" id="" cols="30" rows="5"></textarea>
                             </div>
-                            <div class="list-common d-flex flex-wrap mb-3">
+                            <!-- <div class="list-common d-flex flex-wrap mb-3">
                                 <h4 class="list_title-second">現場狀況</h4>
                                 <textarea class="list-common_second" name="" id="" cols="30" rows="5"></textarea>
-                            </div>
-                            <div class="machine_data_state d-flex flex-wrap align-items-center abnormal mb-3">
-                                <div class="d-flex align-items-center machine_data_state_show">
-                                    <div class="check"><img class="check_icon" src="./public/img/icon_check.svg" alt=""></div>
-                                    <span class="ms-2">異常</span>
-                                </div>
-                                <div class="machine_data_state_hide w-100 mt-2">
-                                    <div class="mb-2">
-                                        <label class="d-block mb-1" for="">異常狀況</label>
-                                        <input class="w-100" type="text">
-                                    </div>
-                                    <div class="mb-2">
-                                        <label class="d-block mb-1" for="">技師判斷</label>
-                                        <input class="w-100" type="text">
-                                    </div>
-                                    <div class="">
-                                        <label class="d-block mb-1" for="">處理結果</label>
-                                        <input class="w-100" type="text">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="machine_data_state d-flex flex-wrap align-items-center custom mb-3">
-                                <div class="d-flex align-items-center machine_data_state_show">
-                                    <div class="check"><img class="check_icon" src="./public/img/icon_check.svg" alt=""></div>
-                                    <span class="ms-2">客訴</span>
-                                </div>
-                                <div class="machine_data_state_hide w-100 mt-2">
-                                    <div class="mb-2">
-                                        <label class="d-block mb-1" for="">客訴狀況</label>
-                                        <input class="w-100" type="text">
-                                    </div>
-                                    <div class="mb-2">
-                                        <label class="d-block mb-1" for="">溝通過程</label>
-                                        <input class="w-100" type="text">
-                                    </div>
-                                    <div class="">
-                                        <label class="d-block mb-1" for="">處理結果</label>
-                                        <input class="w-100" type="text">
-                                    </div>
-                                </div>
-                            </div>
+                            </div> -->
                             <div class="list-common d-flex flex-wrap mb-3">
                                 <h4 class="list_title-second">照片</h4>
                                 <div class="list-common_second list-mahcine-pic">
-                                    <div class="machine-add-pic btn-bg-blue">
+                                    <div class="machine-add-pic btn-bg-blue mb-2">
                                         <span>新增</span>
                                         <input type="file" multiple class="machine-upload-icon">
                                     </div>
@@ -408,6 +376,64 @@
                                         </div>
                                     </div>
                                 </div> -->
+                            </div>
+                            <div class="machine_data_state d-flex flex-wrap align-items-center abnormal mb-3">
+                                <div class="d-flex align-items-center machine_data_state_show">
+                                    <div class="check"><img class="check_icon" src="./public/img/icon_check.svg" alt=""></div>
+                                    <span class="ms-2">異常</span>
+                                </div>
+                                <div class="machine_data_state_hide w-100 mt-2">
+                                    <div class="mb-2">
+                                        <label class="d-block mb-1" for="">異常狀況</label>
+                                        <input class="w-100" type="text">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="d-block mb-1" for="">技師判斷</label>
+                                        <input class="w-100" type="text">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="d-block mb-1" for="">處理結果</label>
+                                        <input class="w-100" type="text">
+                                    </div>
+                                    <div>
+                                        <label class="d-block mb-1" for="">照片</label>
+                                        <div class="machine-add-pic btn-bg-blue">
+                                            <span>新增</span>
+                                            <input type="file" multiple class="abnormal-upload abnormal-btn">
+                                        </div>
+                                        <div class="abnormal-pic d-flex flex-wrap mt-2">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="machine_data_state d-flex flex-wrap align-items-center custom mb-3">
+                                <div class="d-flex align-items-center machine_data_state_show">
+                                    <div class="check"><img class="check_icon" src="./public/img/icon_check.svg" alt=""></div>
+                                    <span class="ms-2">客訴</span>
+                                </div>
+                                <div class="machine_data_state_hide w-100 mt-2">
+                                    <div class="mb-2">
+                                        <label class="d-block mb-1" for="">客訴狀況</label>
+                                        <input class="w-100" type="text">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="d-block mb-1" for="">溝通過程</label>
+                                        <input class="w-100" type="text">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="d-block mb-1" for="">處理結果</label>
+                                        <input class="w-100" type="text">
+                                    </div>
+                                    <div>
+                                        <label class="d-block mb-1" for="">照片</label>
+                                        <div class="machine-add-pic btn-bg-blue">
+                                            <span>新增</span>
+                                            <input type="file" multiple class="custom-upload">
+                                        </div>
+                                        <div class="custom-pic d-flex flex-wrap mt-2">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -565,6 +591,7 @@
         }
 
 
+        // 機器照片
         let list_machine_pic = $(".list-mahcine-pic");
         let machine_upload;
         let machine_length;
@@ -611,6 +638,80 @@
                     }
                 };
                 reader.readAsDataURL(machine_upload.files[i]);
+            }
+        })
+
+        // 異常照片
+        let abnormal_pic = $(".abnormal-pic");
+        let abnormal_upload;
+        let abnormal_length;
+        $(document).on("change",".abnormal-upload",function(e){
+            abnormal_upload = this;
+            abnormal_length = abnormal_upload.files.length;
+
+            for(let i=0;i<abnormal_length;i++){
+                let reader = new FileReader();
+                if (!reader) {
+                    console.log("對不起，您的瀏覽器不支持！請更換瀏覽器試一下");
+                    return;
+                }
+                reader.error = function (e) {
+                    console.log("讀取異常");
+                };
+                (function(i){
+                    reader.onload=function(e){
+                        let abnormal_pic_content = $("<div class='abnormal-pic_content'></div>");
+                        let abnormal_img = $("<img class='abnormal-pic_img' src=''>").attr("src",e.target.result);
+                        let abnormal_pic_delete = $("<img class='abnormal-pic_delete' src='./public/img/icon_delete.svg'>");
+                        abnormal_pic_content.append(abnormal_img,abnormal_pic_delete);
+                        abnormal_pic.append(abnormal_pic_content);
+                    }
+                })(i);
+
+                reader.onloadstart = function () {};
+                reader.onprogress = function (e) {
+                    if (e.lengthComputable) {
+                    console.log("正在讀取文件");
+                    }
+                };
+                reader.readAsDataURL(abnormal_upload.files[i]);
+            }
+        })
+
+        // 客訴照片
+        let custom_pic = $(".custom-pic");
+        let custom_upload;
+        let custom_length;
+        $(document).on("change",".custom-upload",function(e){
+            custom_upload = this;
+            custom_length = custom_upload.files.length;
+
+            for(let i=0;i<custom_length;i++){
+                let reader = new FileReader();
+                if (!reader) {
+                    console.log("對不起，您的瀏覽器不支持！請更換瀏覽器試一下");
+                    return;
+                }
+                reader.error = function (e) {
+                    console.log("讀取異常");
+                };
+                (function(i){
+                    reader.onload=function(e){
+                        let custom_pic_content = $("<div class='abnormal-pic_content'></div>");
+                        let custom_img = $("<img class='abnormal-pic_img' src=''>").attr("src",e.target.result);
+                        let custom_pic_delete = $("<img class='abnormal-pic_delete' src='./public/img/icon_delete.svg'>");
+                        custom_pic_content.append(custom_img,custom_pic_delete);
+                        custom_pic.append(custom_pic_content);
+                    }
+                })(i);
+
+                reader.onloadstart = function () {};
+                reader.onprogress = function (e) {
+                    if (e.lengthComputable) {
+                    console.log("正在讀取文件");
+                    }
+                };
+                reader.readAsDataURL(custom_upload.files[i]);
             }
         })
     </script>

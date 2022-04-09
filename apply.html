@@ -200,15 +200,53 @@
                     </div>
                 </div>
             </div>
-            <div class="d-flex align-items-center justify-content-center mt-4 mb-4">
-                <a class="btn-bg-white btn-medium mx-2" href="">清除</a>
-                <a class="btn-bg-blue btn-medium mx-2" href="">送出</a>
+            <div class="d-flex align-items-center justify-content-between mt-4 mb-4">
+                <a class="btn-bg-blue btn-medium" href="./index.html">回首頁</a>
+                <div class="d-flex">
+                    <a class="btn-bg-white btn-medium mx-2" href="">清除</a>
+                    <a class="btn-bg-blue btn-medium ms-2" data-bs-toggle="modal" data-bs-target="#confirm-send">送出</a>
+                </div>
             </div>
         </main>
         
     </div>
 
     <footer>版權所有©2022 小川職人</footer>
+
+    <div class="modal fade" id="confirm-send" tabindex="-1" aria-labelledby="confirm-sendLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content pb-0">
+            <div class="modal-header">
+              <h5 class="modal-title" id="confirm-sendLabel">確認送出</h5>
+              <img class="modal-close" data-bs-dismiss="modal" src="./public/img/icon_close.svg" alt="">
+            </div>
+            <div class="modal-body py-4">
+                <p class="text-center">確定要送出嗎？</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-round btn-bg-light mx-2" data-bs-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-round btn-bg-light mx-2" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#send-success">確定</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="send-success" tabindex="-1" aria-labelledby="send-successLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content pb-0">
+            <div class="modal-header">
+              <h5 class="modal-title" id="send-successLabel">成功送出</h5>
+              <img class="modal-close" data-bs-dismiss="modal" src="./public/img/icon_close.svg" alt="">
+            </div>
+            <div class="modal-body py-4">
+                <img class="modal-icon" src="./public/img/icon_check-circle.svg" alt="">
+            </div>
+            <div class="modal-footer">
+                <a href="./index.html" class="btn btn-round btn-bg-light mx-auto">回首頁</a>
+            </div>
+          </div>
+        </div>
+    </div>
 
     <script src="./public/js/jquery/jquery.min.js"></script>
     <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>

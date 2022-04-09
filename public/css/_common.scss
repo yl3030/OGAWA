@@ -538,12 +538,12 @@ main {
 .case {
     &_content {
         h3 {
-            width: calc(100% - 125px);
+            width: calc(100% - 160px);
         }
 
     }
     &_btn {
-        width: 125px;
+        width: 145px;
         .icon_inform {
             // width: 25px;
             width: 30px;
@@ -555,7 +555,16 @@ main {
             }
         }
         a {
-            margin-left: 13px;
+            // margin-left: 13px;
+        }
+        .case-arrow {
+            width: 9px;
+            transform: rotate(90deg)translateY(5px);
+            margin-left: 5px;
+            transition: 0.3s;
+            &.active {
+                transform: rotate(-90deg)translateY(5px);
+            }
         }
     }
     &_table {
@@ -621,7 +630,7 @@ main {
         .case {
             &_content {
                 h3 {
-                    width: calc(100% - 60px - 125px);
+                    width: calc(100% - 60px - 160px);
                     padding: 0 10px;
                 }
             }
@@ -654,6 +663,32 @@ main {
         color: #4A4A4A;
         font-size: 32px;
         margin: 0 0 30px;
+    }
+    &_hide {
+        display: none;
+    }
+    &-arrow {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        span {
+            font-size: 14px;
+            color: $deep;
+            margin-right: 8px;
+        }
+        img {
+            width: 8px;
+            display: block;
+            // margin: 0 auto;
+            transform: rotate(90deg);
+        }
+        &.active {
+            img {
+                transform: rotate(-90deg);
+            }
+        }
     }
 }
 
@@ -783,6 +818,16 @@ main {
             &:last-child {
                 margin-bottom: 0;
             }
+            &.self {
+                input {
+                    width: calc(100% - 75px - 100px - 10px);
+                }
+                .select_item {
+                    width: 100px;
+                    // border: 0;
+                    margin-left: 10px;
+                }
+            }
         }
     }
     &-receipt-upload {
@@ -866,11 +911,19 @@ main {
         position: relative;
         margin-bottom: 10px;
         margin-right: 10px;
-        img {
+        cursor: pointer;
+        &_img,&_video {
             position: absolute;
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+        &_arrow {
+            width: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
         }
     }
     &_mask {
@@ -878,6 +931,88 @@ main {
         width: 100%;
         height: 100%;
         background-color: rgba(0,0,0,0.33);
+    }
+    &-modal {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000;
+        top: 0;
+        left: 0;
+        display: none;
+        z-index: 100;
+        &_close {
+            position: absolute;
+            width: 30px;
+            top: 20px;
+            right: 20px;
+        }
+        &_arrow {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            top: 50%;
+            img {
+                width: 10px;
+            }
+            &.prev {
+                left: 20px;
+                transform: scaleX(-1)translateY(-50%);
+            }
+            &.next {
+                right: 20px;
+                transform: translateY(-50%);
+            }
+        }
+        &_content {
+            max-width: 768px;
+            width: 100%;
+            height: 100vh;
+            margin: 0 auto;
+            position: relative;
+        }
+        &_img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        &_video {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: none;
+            video {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                top: 0;
+                left: 0;
+            }
+            &.playing {
+                .pic-modal_varrow {
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                }
+            }
+        }
+        &_varrow {
+            position: absolute;
+            width: 100px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            cursor: pointer;
+        }
     }
 }
 
@@ -932,6 +1067,11 @@ footer {
         justify-content: center;
         top: calc(100% + 20px);
         left: 0;
+    }
+    &-icon {
+        width: 80px;
+        display: block;
+        margin: 0 auto;
     }
 }
 
@@ -1027,7 +1167,6 @@ footer {
     }
 }
 
-
 .check {
     width: 22px;
     height: 22px;
@@ -1079,6 +1218,11 @@ footer {
                     span {
                         color: $abnormal;
                     }
+                    .machine-add-pic {
+                        span {
+                            color: #fff;
+                        }
+                    }
                 }
             }
             &.custom {
@@ -1095,6 +1239,11 @@ footer {
                     }
                     span {
                         color: $custom;
+                    }
+                    .machine-add-pic {
+                        span {
+                            color: #fff;
+                        }
                     }
                 }
             }
@@ -1210,7 +1359,7 @@ footer {
         }
     }
     &-add-pic {
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1312,6 +1461,37 @@ footer {
         margin: 0 auto 5px;
     }
 }
+
+.abnormal {
+    &-pic {
+        margin-top: 10px;
+        &_content {
+            width: 70px;
+            height: 70px;
+            border-radius: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        &_img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+        &_delete {
+            position: absolute;
+            width: 15px;
+            top: 5px;
+            left: 5px;
+        }
+    }
+}
+
+
 
 
 @media screen and (max-width:940px) {

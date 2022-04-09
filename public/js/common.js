@@ -40,7 +40,7 @@ $(".contact-select").click(function(){
         let date = today.getDate();
         let hour = today.getHours();
         let minute = today.getMinutes();
-        let now = year + "/" + month + "/" + date + "  " + hour + ":" + minute;
+        let now = year + "/" + month + "/" + date + "  " + hour + ":" + minute + " 聯絡者";
         $(this).find(".contact_date").text(now).show();
     }
     
@@ -132,18 +132,17 @@ let machine_class = $("<div class='list-common d-flex flex-wrap mb-3'><h4 class=
 let machine_service = $("<div class='list-common d-flex flex-wrap mb-3'><div class='w-100 d-flex align-items-center justify-content-between'><h4 class='list_title-second'>服務項目</h4><img class='icon_question' data-bs-toggle='modal' data-bs-target='#service-intro' src='./public/img/icon_question.svg'></div><div class='list-common_second'><div class='select d-flex flex-wrap select-small select-deep'><div class='select_item machien_select_item d-flex align-items-center justify-content-between'><span>分離</span></div><div class='select_item machien_select_item d-flex align-items-center justify-content-between'><span>吊隱</span></div><div class='select_item machien_select_item d-flex align-items-center justify-content-between'><span>窗型</span></div><div class='select_item machien_select_item d-flex align-items-center justify-content-between'><span>四方吹</span></div><div class='select_item machien_select_item d-flex align-items-center justify-content-between'><span>直立</span></div><div class='select_item machien_select_item d-flex align-items-center justify-content-between'><span>滾筒</span></div><div class='select_item machien_select_item d-flex align-items-center justify-content-between'><span>水管</span></div><div class='select_item machien_select_item d-flex align-items-center justify-content-between'><span>箱型</span></div></div></div></div>");
 let machine_brand = $("<div class='list-common d-flex flex-wrap mb-3'><h4 class='list_title-second'>品牌</h4><select class='list-common_second' name='' id=''><option value=''>品牌一</option><option value=''>品牌二</option><option value=''>品牌三</option><option value=''>品牌四</option></select></div>");
 let machine_num = $("<div class='list-common d-flex flex-wrap mb-3'><h4 class='list_title-second'>型號</h4><input class='list-common_second'></input></div>");
-let machine_state = $("<div class='list-common d-flex flex-wrap mb-3'><h4 class='list_title-second'>機況</h4><div class='list-common_second'><div class='select d-flex flex-wrap select-small select-deep'><div class='select_item d-flex align-items-center justify-content-between'><span>新機</span></div><div class='select_item d-flex align-items-center justify-content-between'><span>普通</span></div><div class='select_item d-flex align-items-center justify-content-between'><span>老機</span></div><div class='select_item d-flex align-items-center justify-content-between'><span>無法拆洗</span></div></div></div></div>");
+let machine_state = $("<div class='list-common d-flex flex-wrap mb-3'><h4 class='list_title-second'>機況</h4><div class='list-common_second'><div class='select d-flex flex-wrap select-small select-deep'><div class='select_item d-flex align-items-center justify-content-between'><span>新機</span></div><div class='select_item d-flex align-items-center justify-content-between'><span>普通</span></div><div class='select_item d-flex align-items-center justify-content-between'><span>老機</span></div><div class='select_item d-flex align-items-center justify-content-between'><span>無法拆洗</span></div><div class=‘select_item d-flex align-items-center justify-content-between'><span>太乾淨</span></div><div class=‘select_item d-flex align-items-center justify-content-between'><span>異常不洗</span></div></div></div></div>");
 let machine_year = $("<div class='list-common d-flex flex-wrap mb-3'><h4 class='list_title-second'>製造年份</h4><div class='list-common_second list-make-time'><input type='text'><span>年(西元)</span></div></div>");
-let machine_problem = $("<div class='list-common d-flex flex-wrap mb-3'><h4 class='list_title-second'>服務前問題</h4><textarea class='list-common_second' name='' id='' cols='30' rows='5'></textarea></div>");
+let machine_problem = $("<div class='list-common d-flex flex-wrap mb-3'><h4 class='list_title-second'>狀況回報</h4><textarea class='list-common_second' name='' id='' cols='30' rows='5'></textarea></div>");
 let machine_placeState = $("<div class='list-common d-flex flex-wrap mb-3'><h4 class='list_title-second'>現場狀況</h4><textarea class='list-common_second' name='' id='' cols='30' rows='5'></textarea></div>");
 let machine_abnormal = $("<div class='machine_data_state d-flex flex-wrap align-items-center abnormal mb-3'><div class='d-flex align-items-center machine_data_state_show'><div class='check'><img class='check_icon' src='./public/img/icon_check.svg' alt=''></div><span class='ms-2'>異常</span></div><div class='machine_data_state_hide w-100 mt-2'><div class='mb-2'><label class='d-block mb-1' for=''>異常狀況</label><input class='w-100' type='text'></div><div class='mb-2'><label class='d-block mb-1' for=''>技師判斷</label><input class='w-100' type='text'></div><div class=''><label class='d-block mb-1' for=''>處理結果</label><input class='w-100' type='text'></div></div></div>");
 let machine_custom = $("<div class='machine_data_state d-flex flex-wrap align-items-center custom mb-3'><div class='d-flex align-items-center machine_data_state_show'><div class='check'><img class='check_icon' src='./public/img/icon_check.svg' alt=''></div><span class='ms-2'>客訴</span></div><div class='machine_data_state_hide w-100 mt-2'><div class='mb-2'><label class='d-block mb-1' for=''>客訴狀況</label><input class='w-100' type='text'></div><div class='mb-2'><label class='d-block mb-1' for=''>溝通過程</label><input class='w-100' type='text'></div><div><label class='d-block mb-1' for=''>處理結果</label><input class='w-100' type='text'></div></div></div>");
 let machine_pic = $("<div class='list-common d-flex flex-wrap mb-3'><h4 class='list_title-second'>照片</h4><div class='list-common_second list-mahcine-pic'><div class='machine_pic-upload d-flex align-items-center'><div class='pic cover-box'><img class='plus' src='./public/img/icon_plus3.svg' alt=''><input type='file' class='machine-upload-icon'><img src='' class='machine_pic-main' alt=''><img class='machine_pic-delete' src='./public/img/icon_delete.svg' alt=''></div><div class='select d-flex flex-wrap select-small select-deep'><div class='select_item d-flex align-items-center justify-content-between'><span>外觀</span></div><div class='select_item d-flex align-items-center justify-content-between'><span>型號</span></div><div class='select_item d-flex align-items-center justify-content-between'><span>洗前</span></div><div class='select_item d-flex align-items-center justify-content-between'><span>洗後</span></div><div class='select_item d-flex align-items-center justify-content-between'><span>其他</span></div></div></div></div></div>");
 
-machine_hide.append(machine_class,machine_service,machine_brand,machine_num,machine_state,machine_year,machine_problem,machine_placeState,machine_abnormal,machine_custom,machine_pic);
+machine_hide.append(machine_class,machine_service,machine_brand,machine_num,machine_state,machine_year,machine_problem,machine_pic,machine_abnormal,machine_custom);
 machine_data.append(machine_title,machine_hide);
 $(".add-machine").click(function(){
-    console.log("新增");
     $(".machine").append(machine_data);
 })
 
@@ -180,4 +179,92 @@ $(".search-class").change(function(){
         $(this).parents(".search").find(".search-input").css("display","flex");
         $(this).parents(".search").find(".month-duration").css("display","none");
     }
+})
+
+// 圖片、影片
+let pic_index,data_modal,pic_length;
+$(".pic_box").click(function(){
+    pic_index = $(this).index();
+    data_modal = $(this).parents(".pic").data("modal");
+    pic_length = $(data_modal).children(".pic_box").length;
+    console.log(data_modal);
+    let pic_src = $(this).children(".pic_box_content").attr("src");
+    let pic_content = $(this).children(".pic_box_content");
+    $(".pic-modal").show();
+    if(pic_content.hasClass("pic_box_img")) {
+        $(".pic-modal_video").hide();
+        $(".pic-modal_img").show().attr("src",pic_src);
+    }else if(pic_content.hasClass("pic_box_video")){
+        $(".pic-modal_img").hide();
+        $(".pic-modal_video").show();
+        $(".pic-modal_video").children("#modal-video").attr("src",pic_src);
+        $(".pic-modal_video").removeClass("playing");
+    }
+    if(pic_index==0){
+        $(".pic-modal_arrow.prev").hide();
+    }else if(pic_index==pic_length-1){
+        $(".pic-modal_arrow.next").hide();
+    }else {
+        $(".pic-modal_arrow.prev").show();
+        $(".pic-modal_arrow.next").show();
+    }
+})
+$(".pic-modal_close").click(function(){
+    $(this).parents(".pic-modal").hide();
+    pic_index = "";
+    data_modal = "";
+    pic_length = "";
+})
+$(".pic-modal_arrow").click(function(){
+    pic_length = $(data_modal).children(".pic_box").length;
+    if($(this).hasClass("prev")){
+        if(pic_index > 0){
+            pic_index--;
+        }else {
+            pic_index = 0;
+        }
+    }else if($(this).hasClass("next")){
+        if(pic_index < pic_length){
+            pic_index++;
+        }else {
+            pic_index = pic_length;
+        }
+    }
+    if(pic_index==0){
+        $(".pic-modal_arrow.prev").hide();
+    }else if(pic_index==pic_length-1){
+        $(".pic-modal_arrow.next").hide();
+    }else {
+        $(".pic-modal_arrow").show();
+    }
+    console.log(pic_index);
+    let pic_box = $(data_modal).children(".pic_box").eq(pic_index).children(".pic_box_content");
+    let pic_src = pic_box.attr("src");
+    if(pic_box.hasClass("pic_box_img")) {
+        $(".pic-modal_video").hide();
+        $(".pic-modal_img").show().attr("src",pic_src);
+    }else if(pic_box.hasClass("pic_box_video")){
+        $(".pic-modal_img").hide();
+        $(".pic-modal_video").show();
+        $(".pic-modal_video").children("#modal-video").attr("src",pic_src);
+        $(".pic-modal_video").removeClass("playing");
+    }
+})
+
+// 首頁案件展開、收合
+$(".case-arrow").click(function(){
+    if($(this).hasClass("active")){
+        $(this).parents(".box-common_content").find(".case_hide").slideUp(300);
+        $(this).removeClass("active");
+        $(this).children("span").text("看更多");
+    }else {
+        $(this).parents(".box-common_content").find(".case_hide").slideDown(300);
+        $(this).addClass("active");
+        $(this).children("span").text("隱藏內容");
+    }
+})
+
+// 異常、客訴照片刪除
+$(document).on("click",".abnormal-pic_delete",function(){
+    $(this).parents(".abnormal-pic_content").remove();
 })

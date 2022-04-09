@@ -67,7 +67,7 @@
             <div class="box-common mb-30" id="data">
                 <h2 class="box_title">基本資料</h2>
                 <div class="box-common_content">
-                    <div class="list-common d-flex flex-wrap align-items-center mb-2">
+                    <!-- <div class="list-common d-flex flex-wrap align-items-center mb-2">
                         <div class="list_title d-flex align-items-center">
                             <h4>訂單編號</h4>
                         </div>
@@ -97,7 +97,7 @@
                         </div>
                         <p class="list_content">683V694J4X1J43124EKN</p>
                     </div>
-                    <hr class="hr-common">
+                    <hr class="hr-common"> -->
                     <div class="list-common d-flex flex-wrap align-items-center mb-2">
                         <div class="list_title d-flex align-items-center">
                             <h4>訂單狀態</h4>
@@ -128,18 +128,19 @@
                         </div>
                         <p class="list_content">健檢另外三台 有可能安排之後再洗</p>
                     </div>
-                    <div class="pic d-flex flex-wrap mt-3">
+                    <div class="pic d-flex flex-wrap" data-modal="#pic-1" id="pic-1">
                         <div class="pic_box">
-                            <img src="./public/img/pic1.png" alt="">
+                            <img class="pic_box_content pic_box_img" src="./public/img/pic1.png" alt="">
                             <div class="pic_mask"></div>
                         </div>
                         <div class="pic_box">
-                            <img src="./public/img/pic2.png" alt="">
+                            <img class="pic_box_content pic_box_img" src="./public/img/pic2.png" alt="">
                             <div class="pic_mask"></div>
                         </div>
                         <div class="pic_box">
-                            <img src="./public/img/pic3.png" alt="">
+                            <video class="pic_box_content pic_box_video" src="./public/img/MOV_2559.mp4"></video>
                             <div class="pic_mask"></div>
+                            <img class="pic_box_arrow" src="./public/img/icon_video-arrow.svg" alt="">
                         </div>
                     </div>
                     <hr class="hr-common">
@@ -750,6 +751,19 @@
         </div>
       </div>
 
+      <div class="pic-modal">
+        <div class="pic-modal_content">
+            <img class="pic-modal_img" src="" alt="">
+            <div class="pic-modal_video">
+                <video id="modal-video" src=""></video>
+                <img class="pic-modal_varrow" onclick="playpause()" src="./public/img/icon_video-arrow.svg" alt="">
+            </div>
+        </div>
+        <img class="pic-modal_close" src="./public/img/icon_close.svg" alt="">
+        <div class="pic-modal_arrow prev"><img src="./public/img/icon_arrow-gray-right.svg" alt=""></div>
+        <div class="pic-modal_arrow next"><img src="./public/img/icon_arrow-gray-right.svg" alt=""></div>
+    </div>
+
     <script src="./public/js/jquery/jquery.min.js"></script>
     <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="./public/js/common.js"></script>
@@ -769,6 +783,26 @@
             }else if($(window).scrollTop() >= return_top){
                 $(".fixed-btn_link-return").addClass("active").siblings(".fixed-btn_link").removeClass("active");
             }
+        })
+    </script>
+    <script>
+        let video = document.getElementById("modal-video");
+        function playpause(){
+            if(video.paused){
+                video.play();
+                $(".pic-modal_video").addClass("playing");
+            }else {
+                video.pause();
+                $(".pic-modal_video").removeClass("playing");
+            }
+        }
+        $(".pic-modal_close").click(function(){
+            video.pause();
+            $(".pic-modal_video").removeClass("playing");
+        })
+        $(".pic-modal_arrow").click(function(){
+            video.pause();
+            $(".pic-modal_video").removeClass("playing");
         })
     </script>
 </body>
